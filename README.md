@@ -1,35 +1,52 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+<h1 align="center">Covid Companion Responsive Website Project</h1>
 
-Welcome Louie O Hagan,
+Project Description
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+Navigation Buttons
 
-## Gitpod Reminders
+Project preview/showcase
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## User Experience (UX)
 
-`python3 -m http.server`
+- ### User stories
 
-A blue button should appear to click: *Make Public*,
+- ### Design
 
-Another blue button should appear to click: *Open Browser*.
+* ### Wireframes
+    
+## Features
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Current Pages & Features
 
-A blue button should appear to click: *Make Public*,
+### To Do List
 
-Another blue button should appear to click: *Open Browser*.
+###### Last Updated: 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
+### Features Left to Implement
+##### These are features that have not been added at the time of development due to various reasons such as time limitations.
 
-## Updates Since The Instructional Video
+## Technologies Used
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
+### Languages Used
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Frameworks, Libraries & Programs Used
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Testing
 
---------
+### Testing User Stories from User Experience (UX) Section
 
-Happy coding!
+### Further Testing
+
+### Known Bugs
+
+## Deployment
+
+## Credits
+
+### Code
+
+### Content
+
+### Media
+
+### Acknowledgements
