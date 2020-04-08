@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, render_template
 from flask_pymongo import PyMongo
 from os import path
 if path.exists("env.py"):
@@ -15,57 +15,57 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def home():
-    return "Hello Home"
+    return render_template("index.html")
 
 
 @app.route("/sign_up")
 def sign_up():
-    return "Sign Up"
+    return render_template("sign-up.html")
 
 
 @app.route("/sign_in")
 def sign_in():
-    return "Sign In"
+    return render_template("sign-in.html")
 
 
 @app.route("/dashboard")
 def dashboard():
-    return "Dashboard"
+    return render_template("dashboard.html")
 
 
 @app.route("/update_profile")
 def update_profile():
-    return "Update Profile"
+    return render_template("update-profile.html")
 
 
 @app.route("/get_help")
 def get_help():
-    return "Get Help"
+    return render_template("get-help.html")
 
 
 @app.route("/edit_post")
 def edit_post():
-    return "Edit Post"
+    return render_template("edit-post.html")
 
 
 @app.route("/give_help")
 def give_help():
-    return "Give Help"
+    return render_template("give-help.html")
 
-
+# Error Handlers - Returning content if error occurs
 @app.errorhandler(404)
 def error404(error):
-    return "This is a 404 error - Page Not Found"
+    return render_template("404.html")
 
 
 @app.errorhandler(403)
 def error403(error):
-    return "This is a 403 Error - Forbidden"
+    return render_template("403.html")
 
 
 @app.errorhandler(500)
 def error500(error):
-    return "This is a 500 Error - Internal Server Error"
+    return render_template("500.html")
 
 
 if __name__ == "__main__":
