@@ -15,7 +15,7 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def home():
-    return "Hello World"
+    return "Hello Home"
 
 
 @app.route("/sign_up")
@@ -51,6 +51,21 @@ def edit_post():
 @app.route("/give_help")
 def give_help():
     return "Give Help"
+
+
+@app.errorhandler(404)
+def error404(error):
+    return "This is a 404 error - Page Not Found"
+
+
+@app.errorhandler(403)
+def error403(error):
+    return "This is a 403 Error - Forbidden"
+
+
+@app.errorhandler(500)
+def error500(error):
+    return "This is a 500 Error - Internal Server Error"
 
 
 if __name__ == "__main__":
