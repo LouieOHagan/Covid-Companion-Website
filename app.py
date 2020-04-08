@@ -18,14 +18,14 @@ def home():
     return render_template("index.html", title="Home")
 
 
-@app.route("/sign_up")
+@app.route("/sign-up")
 def sign_up():
     return render_template("sign-up.html")
 
 
-@app.route("/sign_in")
-def sign_in():
-    return render_template("sign-in.html")
+@app.route("/login")
+def login():
+    return render_template("login.html")
 
 
 @app.route("/dashboard")
@@ -33,22 +33,22 @@ def dashboard():
     return render_template("dashboard.html")
 
 
-@app.route("/update_profile")
+@app.route("/update-profile")
 def update_profile():
     return render_template("update-profile.html")
 
 
-@app.route("/get_help")
+@app.route("/get-help")
 def get_help():
     return render_template("get-help.html")
 
 
-@app.route("/edit_post")
+@app.route("/edit-post")
 def edit_post():
     return render_template("edit-post.html")
 
 
-@app.route("/give_help")
+@app.route("/give-help")
 def give_help():
     return render_template("give-help.html")
 
