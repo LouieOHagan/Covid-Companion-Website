@@ -1,0 +1,77 @@
+/* --------------------------Colours */
+
+/* --------------------------Special Padding/Margin */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.125rem;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+/* --------------------------Navbar */
+
+.logo{
+    background: url(../images/logo.png) center no-repeat;
+    background-size: 3.125rem;
+    width: 3.125rem;
+    height: 3.125rem;
+    margin: 0 25px 0 0.625rem;
+}
+
+.nav-colour {
+    background-color: #3c3c3c!important;
+    width: 100%;
+}
+
+.cc-navbar {
+    margin: auto;
+    width: 80%;
+}
+
+.nav-item {
+    margin-right: 50px;
+}
+
+.nav-link {
+    color: #f5f5f5;
+}
+
+.nav-link:hover {
+    color: #feb62e;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1.5px;
+    background: #feb62e;
+    transition: width .3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    transition: width .5s;
+}
+
+.nav-btn {
+    background-color: #feb62e;
+    border-radius: 2.1875rem;
+    padding: 0 0.3125rem 0 0.5rem;
+}
+
+.nav-btn:hover {
+    background-color: #f8ae24;
+}
+
+.nav-btn .nav-link {
+    font-weight: 800;
+}
+
+.nav-btn .nav-link:hover {
+    color: #f5f5f5;
+}

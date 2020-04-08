@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='images/tab-icon.png') }}" type="image/x-icon">
+
+    <!-- Page Title -->
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- CSS Links -->
+
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Hover.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css">
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav-colour">
+        
+            <nav class="navbar navbar-expand-md cc-navbar">
+                <a class="logo" href="{{ url_for('home') }}"></a>
+                <!-- Navigation Bar Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item activated">
+                            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('give_help') }}">Give Help</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('get_help') }}">Get Help</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('sign_in') }}">Login</a>
+                        </li>
+                        <li class="nav-btn nav-item">
+                            <a class="nav-link" href="{{ url_for('sign_up') }}">Sign Up Free</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- / .Navigation Bar Links -->
+            </nav>
+        
+    </div>
+    <!-- / .Navigation Bar -->
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
