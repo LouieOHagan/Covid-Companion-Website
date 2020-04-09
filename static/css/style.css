@@ -227,7 +227,6 @@ body {
 @media (max-width: 768px) {
     .footer-base {
         height: 210px;
-        /* background: #3c3c3c; */
         position: relative;
         bottom: 60px;
     }
