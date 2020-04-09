@@ -121,7 +121,6 @@ body {
     color: #f5f5f5;
 }
 
-
 /* --------------------------Media Query */
 
 /* Active for screen sizes under 992px */
@@ -132,5 +131,15 @@ body {
 
     .nav-item {
         margin-right: 40px;
+    }
+}
+
+@media (max-width: 350px) {
+    .phone-nav ul {
+        height: 70px;
+    }
+
+    .phone-nav ul li {
+        padding: 5px;
     }
 }
