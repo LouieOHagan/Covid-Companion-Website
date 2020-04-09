@@ -1,5 +1,10 @@
 /* --------------------------Colours */
 
+.nav-colour {
+    background-color: #3c3c3c!important;
+    width: 100%;
+}
+
 /* --------------------------Special Padding/Margin */
 body {
     padding: 0;
@@ -20,11 +25,6 @@ body {
     width: 3.125rem;
     height: 3.125rem;
     margin: 0 25px 0 0.625rem;
-}
-
-.nav-colour {
-    background-color: #3c3c3c!important;
-    width: 100%;
 }
 
 .cc-navbar {
@@ -48,7 +48,6 @@ body {
 .nav-link:hover {
     color: #feb62e;
     transition: 0.5s;
-
 }
 
 .nav-link::after {
@@ -91,6 +90,8 @@ body {
 	left: 0;
 	margin-top: -5px;
 	width: 100%;
+    z-index: 1;
+    border-top: 2px solid #909090;
 }
 
 .phone-nav ul {
@@ -131,6 +132,84 @@ body {
     text-decoration: none;
 }
 
+/* --------------------------Footer */
+
+.footer-base {
+    height: 200px;
+    background: url(../images/foot.png) bottom no-repeat;
+    position: relative;
+    bottom: 0px;
+}
+
+.connect-icons{
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.connect-icons li{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 0.8125rem;
+}
+
+.connect-icons li i{
+    color: #f7f7f7;
+    background: #3c3c3c;
+    font-size: 20px;
+    width: 37px;
+    height: 37px;
+    padding: 13px 0px;
+    border: 2px solid #f7f7f7;
+    border-radius: 50%;
+    line-height: 7px;
+    text-align: center;
+}
+
+.connect-icons li i:hover,
+.footer-links li a:hover {
+    border-color: #feb62e;
+    color: #feb62e;
+    transition: 0.5s;
+}
+
+.footer-links {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.footer-links li, .footer-links li a{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 0.3125rem;
+    color: #f5f5f5;
+}
+ 
+.copyright{
+    color: rgba(255, 255, 255, 0.925);
+    font-size: 14px;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.creator a,
+.creator i{
+    padding: 0 2px;
+    font-style: normal;
+    color: #f7f7f7;
+    text-decoration: none;
+}
+
+.name{
+    border-bottom: 3px solid #f7f7f7;
+    border-radius: 10%;
+}
+
+
 /* --------------------------Media Query */
 
 /* Active for screen sizes under 992px */
@@ -144,6 +223,33 @@ body {
     }
 }
 
+/* Active for screen sizes under 768px */
+@media (max-width: 768px) {
+    .footer-base {
+        height: 250px;
+        background: #3c3c3c;
+        position: relative;
+        bottom: 10px;
+    }
+}
+
+/* Active for screen sizes under 576px */
+@media (max-width:576px) {
+    .connect-icons li i {
+        font-size: 18px;
+        width: 35px;
+        height: 35px;
+        line-height: 7px;
+    }
+
+    .footer-links li a {
+        font-size: 18px;
+    }
+}
+
+
+
+/* Active for screen sizes under 350px */
 @media (max-width: 350px) {
     .phone-nav ul {
         height: 70px;
@@ -151,5 +257,32 @@ body {
 
     .phone-nav ul li {
         padding: 5px;
+    }
+}
+
+/* Active for screen sizes under 292px */
+@media (max-width:292px) {
+    .footer-base {
+        height: 270px;
+    }
+
+    .connect-icons li {
+        margin: 0 0.3125rem;
+    }
+
+    .connect-icons li i {
+        font-size: 14px;
+        width: 28px;
+        height: 28px;
+        line-height: 2px;
+    }
+
+    .footer-links li a {
+        font-size: 14px;
+        margin: 0 1px;
+    }
+
+    .copyright {
+        font-size: 12px;
     }
 }
