@@ -104,21 +104,31 @@ body {
 
 .phone-nav ul li {
 	color: #f5f5f5;
-	cursor: pointer;
 	flex: 1;
-	padding: 10px;
+	padding: 8px;
 	text-align: center;
 }
 
-.phone-nav ul li:hover, .phone-nav ul li.active {
-	color: #feb62e;
+.phone-nav ul li a i {
+    display: block;
+    font-size: 20px;
+    padding: 3px 0;
+    cursor: pointer;
 }
 
-.phone-nav ul li p, .phone-nav ul li a {
+.phone-nav ul li:hover, 
+.phone-nav ul li a:hover {
+	color: #feb62e;
+    transition: .5s;
+}
+
+.phone-nav ul li a {
 	font-size: 12px;
 	margin: 2px 0;
     display: block;
     color: #f5f5f5;
+    padding: 0;
+    text-decoration: none;
 }
 
 /* --------------------------Media Query */
