@@ -226,10 +226,10 @@ body {
 /* Active for screen sizes under 768px */
 @media (max-width: 768px) {
     .footer-base {
-        height: 250px;
-        background: #3c3c3c;
+        height: 210px;
+        /* background: #3c3c3c; */
         position: relative;
-        bottom: 10px;
+        bottom: 60px;
     }
 }
 
@@ -263,7 +263,7 @@ body {
 /* Active for screen sizes under 292px */
 @media (max-width:292px) {
     .footer-base {
-        height: 270px;
+        height: 230px;
     }
 
     .connect-icons li {
