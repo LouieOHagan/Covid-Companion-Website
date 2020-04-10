@@ -1,2 +1,69 @@
-<h1>This is the get help template</h1>
-<p>Testing</p>
+{% extends 'base.html' %}
+
+{% block title %}{{ title }} | Covid Companion{% endblock %}
+
+{% block content %}
+    <h1>This is the get help template</h1>
+    <p>Testing</p>
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <form action="{{url_for('get_help')}}" method="POST">
+                <!-- Title Input -->
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" class="form-control" name="title" id="title" placeholder="Title" required>
+                </div>
+                <!-- Description Input -->
+                <div class="form-group">
+                    <label for="description">Post Description</label>
+                    <textarea class="form-control" name="description" id="description" placeholder="Post Description" required></textarea>
+                </div>
+                <!-- Click & Collect Input -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="click_and_collect" id="clickAndCollect" onclick="myFunction()">
+                    <label class="form-check-label" for="clickAndCollect">
+                        Is this a Click and Collect Order ?
+                    </label>
+                </div>
+                <!-- Order Number Input -->
+                <div class="form-group">
+                    <label for="order_number">Order Number:</label>
+                    <input type="text" class="form-control" name="order_number" id="order_number" placeholder="Order Number">
+                </div>
+                <!-- County Input -->
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">County</label>
+                    <select class="form-control" id="county" name="county" required>
+                        {% for county in counties %}
+                            <option>{{ county.county_name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>     
+                <!-- Address Input -->
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" class="form-control" name="address" id="address" placeholder="Address" required>
+                </div>
+                <!-- Name Input -->
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
+                </div>
+                <!-- Email Input -->
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                </div>
+                <!-- Phone Input -->
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone" required>
+                </div>
+                
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
