@@ -3,13 +3,16 @@
 {% block title %}{{ title }} | Covid Companion{% endblock %}
 
 {% block content %}
-    <h1>This is the get help template</h1>
-    <p>Testing</p>
 
 <div class="container">
     <div class="row">
-        <div class="col-8">
-            <form action="{{url_for('get_help')}}" method="POST">
+        <div class="col-6  col-md-4 title-card">
+            <h2>Create a Post</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-11 col-sm-12 col-md-8 form-card">
+            <form class="form-section" action="{{url_for('get_help')}}" method="POST">
                 <!-- Title Input -->
                 <div class="form-group">
                     <label for="title">Title:</label>
@@ -22,7 +25,7 @@
                 </div>
                 <!-- Click & Collect Input -->
                 <div class="form-check form-group">
-                    <input class="form-check-input" type="checkbox" name="click_and_collect" id="clickAndCollect">
+                    <input class="form-check-input checkbox-field" type="checkbox" name="click_and_collect" id="clickAndCollect">
                     <label class="form-check-label" for="clickAndCollect">
                         Is this a Click and Collect Order ?
                     </label>
@@ -35,7 +38,7 @@
                 <!-- County Input -->
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">County</label>
-                    <select class="input-field" id="county" name="county" required>
+                    <select class="input-field select-field" id="county" name="county" required>
                         <option value="" disabled selected>Select your county</option>
                         {% for county in counties %}
                             <option>{{ county.county_name }}</option>
@@ -63,7 +66,7 @@
                     <input type="text" class="input-field" name="phone" id="phone" required>
                 </div>
                 
-                <input type="submit" class="submit-btn">
+                <input type="submit" class="submit-btn" value="Post">
             </form>
         </div>
     </div> 

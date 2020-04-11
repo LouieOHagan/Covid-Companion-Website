@@ -71,7 +71,7 @@ body {
 }
 
 .nav-btn:hover {
-    background-color: #f8ae24;
+    background-color: #ecaa2f;
 }
 
 .nav-btn .nav-link {
@@ -211,6 +211,32 @@ body {
 
 /* --------------------------Get Help Page */
 
+.form-card {
+    width: 100%;
+    display: block;
+    margin: 0 auto 50px;
+    background: #3c3c3c;
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+}
+
+.title-card {
+    width: 100%;
+    display: block;
+    background: #3c3c3c;
+    margin: 50px auto 0;
+    color: #feb62e;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    padding: 7px;
+}
+
+.form-section {
+    padding: 30px;
+}
+
 .input-field {
     width: 100%;
     box-sizing: border-box;
@@ -223,6 +249,16 @@ body {
     padding: 5px 0;
     margin-bottom: 20px;
     font-size: 18px;
+    color: #f5f5f5;
+}
+
+.select-field {
+    background: #3c3c3c;
+}
+
+.checkbox-field:hover,
+.select-field:hover {
+    cursor: pointer;
 }
 
 .text-area {
@@ -233,7 +269,15 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 0px;
-    color: #000;
+    color: #feb62e;
+    font-weight: 100;
+    border-bottom: 1px solid #feb62e;
+    padding-right: 5px;
+    width: fit-content;
+}
+
+.form-check label {
+    border: none;
 }
 
 .submit-btn {
@@ -248,11 +292,21 @@ body {
     width: 40%;
 }
 
+.submit-btn:hover {
+    background-color: #ecaa2f;
+}
+
+.input-field:focus {
+    border-bottom: 2px solid #feb62e;
+    transition: .7s;
+} 
 
 /* --------------------------Media Query */
 
 /* Active for screen sizes under 992px */
 @media (max-width: 992px) {
+
+    /* --- Navbar */
     .cc-navbar {
         width: 100%;
     }
@@ -264,6 +318,8 @@ body {
 
 /* Active for screen sizes under 768px */
 @media (max-width: 768px) {
+
+    /* --- Footer */
     .footer-base {
         height: 210px;
         position: relative;
@@ -273,6 +329,8 @@ body {
 
 /* Active for screen sizes under 576px */
 @media (max-width:576px) {
+
+    /* --- Footer */
     .connect-icons li i {
         font-size: 18px;
         width: 35px;
@@ -285,10 +343,10 @@ body {
     }
 }
 
-
-
 /* Active for screen sizes under 350px */
 @media (max-width: 350px) {
+
+    /* --- Small Device Navbar */
     .phone-nav ul {
         height: 70px;
     }
@@ -300,6 +358,8 @@ body {
 
 /* Active for screen sizes under 292px */
 @media (max-width:292px) {
+
+    /* --- Footer */
     .footer-base {
         height: 230px;
     }
