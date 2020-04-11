@@ -3,6 +3,7 @@
 .nav-colour {
     background-color: #3c3c3c!important;
     width: 100%;
+    border-bottom: 2px solid #909090;
 }
 
 /* --------------------------Special Padding/Margin */
@@ -211,14 +212,21 @@ body {
 
 /* --------------------------Get Help Page */
 
+.background {
+    width: 100%;
+    background: url(../images/back-1.jpg) center no-repeat;
+    background-size: cover;
+    height: 1165px;
+}
+
 .form-card {
     width: 100%;
     display: block;
     margin: 0 auto 50px;
     background: #3c3c3c;
-    border: 1px solid rgba(0, 0, 0, .1);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     border-radius: 10px;
+    border: 1px solid #909090;
 }
 
 .title-card {
@@ -231,6 +239,7 @@ body {
     border-top-right-radius: 10px;
     text-align: center;
     padding: 7px;
+    border: 1px solid #909090;
 }
 
 .form-section {
@@ -262,7 +271,8 @@ body {
 }
 
 .text-area {
-    min-height: 100px;
+    min-height: 66px;
+    max-height: 110px;
     margin-bottom: 5px;
 }
 
@@ -298,7 +308,7 @@ body {
 
 .input-field:focus {
     border-bottom: 2px solid #feb62e;
-    transition: .7s;
+    transition: border .7s;
 } 
 
 /* --------------------------Media Query */
@@ -324,6 +334,7 @@ body {
         height: 210px;
         position: relative;
         bottom: 60px;
+        margin-top: 50px;
     }
 }
 
