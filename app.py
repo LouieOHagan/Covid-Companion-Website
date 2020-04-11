@@ -63,7 +63,8 @@ def get_help():
                     'address': address,
                     'name': name,
                     'email': email,
-                    'phone_number': phone_number
+                    'phone_number': phone_number,
+                    'status': 'Available'
                     }
 
         mongo.db.posts.insert_one(new_post)

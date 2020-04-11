@@ -209,6 +209,45 @@ body {
     border-radius: 10%;
 }
 
+/* --------------------------Get Help Page */
+
+.input-field {
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    height: 40px;
+    border-bottom: 2px solid #f5f5f5;
+    background: transparent;
+    padding: 5px 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.text-area {
+    min-height: 100px;
+    margin-bottom: 5px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0px;
+    color: #000;
+}
+
+.submit-btn {
+    background: #feb62e;
+    border: 1px solid #feb62e;
+    border-radius: 2.1875rem;
+    color: #fff;
+    text-transform: uppercase;
+    display: block;
+    margin: auto;
+    padding: 8px 0;
+    width: 40%;
+}
+
 
 /* --------------------------Media Query */
 
