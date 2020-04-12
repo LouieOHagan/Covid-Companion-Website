@@ -1,2 +1,5 @@
 env.py
 __pycache__/
+.theia/
+.gitpod.dockerfile
+.gitpod.yml
