@@ -5,38 +5,45 @@
 {% block content %}
     <h1>This is the give help template</h1>
     <p>Testing</p>
-
+<div class="container">
     {% for post in posts %}
-        <h2>Title: {{ post.title}}</h2>
-        <ul>
-            <li>Loop Number:{{ loop.index }}</li>
-            <li>Description: {{ post.description}}</li>
-            <li>Order Number: {{ post.order_number}}</li>
-            <li>County: {{ post.county}}</li>
-            <li>Delivery Address: {{ post.address}}</li>
-            <li>Name: {{ post.name}}</li>
-            <li>Email: {{ post.email}}</li>
-            <li>Phone Number: {{ post.phone_number}}</li>
-            <li>Status: {{ post.status}}</li>
-        </ul>
 
         <div class="accordion" id="accordionExample">
             <div class="card">
-                <div class="card-header" id="heading{{ loop.index }}">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse{{ loop.index }}" aria-expanded="false" aria-controls="collapse{{ loop.index }}">
-                    Collapsible Group Item #{{ loop.index }}
-                    </button>
-                </h2>
+                <div class="card-header" id="heading{{ loop.index }}" data-toggle="collapse" data-target="#collapse{{ loop.index }}" aria-expanded="false" aria-controls="collapse{{ loop.index }}">
+                <div class="list-inline">
+                    <p class="mb-0 list-inline-item">
+                        {{ post.title}}
+                    </p>
+                    <p class="mb-0 list-inline-item">
+                        -- Status: {{ post.status}}
+                    </p>
+                </div>
+                <p class="mb-0 small">
+                    Posted by: {{ post.name}}
+                </p>
                 </div>
 
                 <div id="collapse{{ loop.index }}" class="collapse" aria-labelledby="heading{{ loop.index }}" data-parent="#accordionExample">
                 <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <p class="mb-0">Description: {{ post.description}}</p>
+                    <p class="mb-0">Order Number: {{ post.order_number}}</p>
+                    <p class="mb-0">County: {{ post.county}}</p>
+                    <p class="mb-0">Delivery Address: {{ post.address}}</p>
+                    <h3>Contact Details:</h3>
+                    <p class="mb-0">Email: {{ post.email}}</p>
+                    <p>Phone Number: {{ post.phone_number}}</p>
+                    <h3>Post Actions:</h3>
+                    <a href="{{url_for('edit_post', post_id=post._id)}}" class="btn btn-info">Edit Post</a>
+                    <a href="" class="btn btn-danger">Delete Post</a>
+                    <h3>Change Post Status:</h3>
+                    <a href="" class="btn btn-warning">In Progress</a>
+                    <a href="" class="btn btn-success">Completed</a>
+
                 </div>
                 </div>
             </div>
         </div>
     {% endfor %}
-
+</div>
 {% endblock %}
