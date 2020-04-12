@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ title }} | Covid Companion{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Are you sure you want to delete the post - {{ post.title }}</h2>
+    <a href="{{url_for('give_help')}}"  class="btn btn-info">Cancel</a>
+    <a href="{{url_for('remove_post', post_id=post._id)}}"  class="btn btn-danger">Delete Post</a>
+    <p>Disclaimer</p>
+</div>
+{% endblock %}

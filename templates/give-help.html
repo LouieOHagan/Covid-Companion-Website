@@ -35,7 +35,7 @@
                     <p>Phone Number: {{ post.phone_number}}</p>
                     <h3>Post Actions:</h3>
                     <a href="{{url_for('edit_post', post_id=post._id)}}" class="btn btn-info">Edit Post</a>
-                    <a href="" class="btn btn-danger">Delete Post</a>
+                    <a href="{{url_for('remove_post_confirmation', post_id=post._id)}}" class="btn btn-danger">Delete Post</a>
                     <h3>Change Post Status:</h3>
                     <a href="" class="btn btn-warning">In Progress</a>
                     <a href="" class="btn btn-success">Completed</a>

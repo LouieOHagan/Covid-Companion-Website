@@ -105,6 +105,18 @@ def edit_post(post_id):
         return redirect(url_for('give_help'))
 
 
+@app.route("/remove-post-confirmation/<post_id>")
+def remove_post_confirmation(post_id):
+    post_name = mongo.db.posts.find_one({"_id": ObjectId(post_id)})
+    return render_template("remove-post.html", title="Remove Post Confirmation", post=post_name)
+
+
+@app.route("/remove-post/<post_id>")
+def remove_post(post_id):
+    mongo.db.posts.remove({"_id": ObjectId(post_id)})
+    return redirect(url_for('give_help'))
+
+
 @app.route("/give-help")
 def give_help():
     posts = mongo.db.posts.find()
