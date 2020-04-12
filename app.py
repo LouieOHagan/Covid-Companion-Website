@@ -1,6 +1,7 @@
 import os
 from flask import Flask, render_template, request, url_for, redirect
 from flask_pymongo import PyMongo
+from bson.objectid import ObjectId
 from os import path
 if path.exists("env.py"):
     import env
@@ -71,9 +72,12 @@ def get_help():
         return redirect(url_for('give_help'))
 
 
-@app.route("/edit-post")
-def edit_post():
-    return render_template("edit-post.html")
+@app.route("/edit-post/<post_id>", methods=["GET", "POST"])
+def edit_post(post_id):
+    if request.method == "GET":
+        post_info = mongo.db.posts.find_one({"_id": ObjectId(post_id)})
+        counties = mongo.db.counties.find()
+        return render_template("edit-post.html", title="Edit Post", post=post_info, counties=counties)
 
 
 @app.route("/give-help")
