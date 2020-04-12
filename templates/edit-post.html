@@ -12,7 +12,7 @@
         </div>
         <div class="row">
             <div class="col-11 col-sm-12 col-md-10 col-lg-8 form-card">
-                <form class="form-section" action="{{url_for('get_help')}}" method="POST">
+                <form class="form-section" action="{{url_for('edit_post', post_id=post._id)}}" method="POST">
                     <!-- Title Input -->
                     <div class="form-group">
                         <label for="title">Title:</label>
@@ -32,7 +32,7 @@
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">County</label>
                         <select class="input-field select-field" id="county" name="county" required>
-                            <option value="">{{ post.county}}</option>
+                            <option value="{{ post.county}}">{{ post.county}}</option>
                             {% for county in counties %}
                                 <option>{{ county.county_name }}</option>
                             {% endfor %}

@@ -78,6 +78,31 @@ def edit_post(post_id):
         post_info = mongo.db.posts.find_one({"_id": ObjectId(post_id)})
         counties = mongo.db.counties.find()
         return render_template("edit-post.html", title="Edit Post", post=post_info, counties=counties)
+    if request.method == "POST":
+        title = request.form["title"]
+        description = request.form["description"]
+        order_number = request.form["order_number"]
+        county = request.form["county"]
+        address = request.form["address"]
+        name = request.form["name"]
+        email = request.form["email"]
+        phone_number = request.form["phone"]
+
+        if order_number == "":
+            order_number = "N/A"
+
+        updated_info = {'title': title,
+                        'description': description,
+                        'order_number': order_number,
+                        'county': county,
+                        'address': address,
+                        'name': name,
+                        'email': email,
+                        'phone_number': phone_number,
+                        }
+        update_post = mongo.db.posts
+        update_post.update({"_id": ObjectId(post_id)}, updated_info)
+        return redirect(url_for('give_help'))
 
 
 @app.route("/give-help")
