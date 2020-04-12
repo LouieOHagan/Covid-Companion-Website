@@ -78,7 +78,8 @@ def edit_post():
 
 @app.route("/give-help")
 def give_help():
-    return render_template("give-help.html")
+    posts = mongo.db.posts.find()
+    return render_template("give-help.html", title="Give Help", posts=posts)
 
 # Error Handlers - Returning content if error occurs
 @app.errorhandler(404)

@@ -1,2 +1,23 @@
-<h1>This is the give help template</h1>
-<p>Testing</p>
+{% extends 'base.html' %}
+
+{% block title %}{{ title }} | Covid Companion{% endblock %}
+
+{% block content %}
+    <h1>This is the give help template</h1>
+    <p>Testing</p>
+
+    {% for post in posts %}
+        <h2>Title: {{ post.title}}</h2>
+        <ul>
+            <li>Description: {{ post.description}}</li>
+            <li>Order Number: {{ post.order_number}}</li>
+            <li>County: {{ post.county}}</li>
+            <li>Delivery Address: {{ post.address}}</li>
+            <li>Name: {{ post.name}}</li>
+            <li>Email: {{ post.email}}</li>
+            <li>Phone Number: {{ post.phone_number}}</li>
+            <li>Status: {{ post.status}}</li>
+        </ul>
+    {% endfor %}
+
+{% endblock %}
