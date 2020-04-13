@@ -43,7 +43,9 @@ def update_profile():
 def get_help():
     if request.method == "GET":
         counties = mongo.db.counties.find()
-        return render_template("get-help.html", title="Get Help", counties=counties)
+        return render_template("get-help.html",
+                               title="Get Help",
+                               counties=counties)
     if request.method == "POST":
         title = request.form["title"]
         description = request.form["description"]
@@ -77,7 +79,10 @@ def edit_post(post_id):
     if request.method == "GET":
         post_info = mongo.db.posts.find_one({"_id": ObjectId(post_id)})
         counties = mongo.db.counties.find()
-        return render_template("edit-post.html", title="Edit Post", post=post_info, counties=counties)
+        return render_template("edit-post.html", title="Edit Post",
+                               post=post_info,
+                               counties=counties)
+
     if request.method == "POST":
         title = request.form["title"]
         description = request.form["description"]
@@ -98,17 +103,19 @@ def edit_post(post_id):
                         'address': address,
                         'name': name,
                         'email': email,
-                        'phone_number': phone_number,
+                        'phone_number': phone_number
                         }
         update_post = mongo.db.posts
-        update_post.update({"_id": ObjectId(post_id)}, updated_info)
+        update_post.update({"_id": ObjectId(post_id)}, {'$set': updated_info})
         return redirect(url_for('give_help'))
 
 
 @app.route("/remove-post-confirmation/<post_id>")
 def remove_post_confirmation(post_id):
     post_name = mongo.db.posts.find_one({"_id": ObjectId(post_id)})
-    return render_template("remove-post.html", title="Remove Post Confirmation", post=post_name)
+    return render_template("remove-post.html",
+                           title="Remove Post Confirmation",
+                           post=post_name)
 
 
 @app.route("/remove-post/<post_id>")
@@ -121,6 +128,7 @@ def remove_post(post_id):
 def give_help():
     posts = mongo.db.posts.find()
     return render_template("give-help.html", title="Give Help", posts=posts)
+
 
 # Error Handlers - Returning content if error occurs
 @app.errorhandler(404)
