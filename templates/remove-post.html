@@ -3,10 +3,29 @@
 {% block title %}{{ title }} | Covid Companion{% endblock %}
 
 {% block content %}
+<div class="background-image confirmation-background">
+    <!-- Remove Post Confirmation Card Section -->
     <div class="container">
-        <h2>Are you sure you want to delete the post - {{ post.title }}</h2>
-        <a href="{{url_for('give_help')}}"  class="btn btn-info">Cancel</a>
-        <a href="{{url_for('remove_post', post_id=post._id)}}"  class="btn btn-danger">Delete Post</a>
-        <p>Disclaimer</p>
+        <div class="row">
+            <!-- Remove Post Confirmation Card Title -->
+            <div class="col-6 col-md-5 col-lg-4 title-card">
+                <h2>Confirmation</h2>
+            </div>
+            <!-- / .Remove Post Confirmation Card Title -->
+        </div>
+        <div class="row">
+            <!-- Remove Post Confirmation Card Content -->
+            <div class="col-11 col-sm-12 col-md-10 col-lg-8 form-card confirmation-card">
+                <h2>Are you sure you want to delete the following post ?</h2>
+                <p>"{{ post.title }}"</p>
+                <p class="disclaimer">By confirming to delete this post, you acknowledge that your post will be immediately removed from our system and will be unrecoverable.</p>
+                <a href="{{url_for('give_help')}}"  class="btn btn-info">Cancel</a>
+                <a href="{{url_for('remove_post', post_id=post._id)}}"  class="btn btn-danger">Delete Post</a>
+            </div>
+            <!-- / .Remove Post Confirmation Card Content -->
+        </div> 
     </div>
+    <!-- / .Remove Post Confirmation Card Section -->
+</div>
+
 {% endblock %}

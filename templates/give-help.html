@@ -3,6 +3,7 @@
 {% block title %}{{ title }} | Covid Companion{% endblock %} 
 
 {% block content %}
+<div class="background-image give-help-background">
     <div class="container">
         {# Loops through the posts collection in DB and returns an accordion containing all the posts #}
         {% for post in posts %}
@@ -62,4 +63,5 @@
         </div>
         {% endfor %}
     </div>
+</div>
 {% endblock %}
