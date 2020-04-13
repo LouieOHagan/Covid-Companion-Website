@@ -37,8 +37,19 @@
                     <a href="{{url_for('edit_post', post_id=post._id)}}" class="btn btn-info">Edit Post</a>
                     <a href="{{url_for('remove_post_confirmation', post_id=post._id)}}" class="btn btn-danger">Delete Post</a>
                     <h3>Change Post Status:</h3>
-                    <a href="" class="btn btn-warning">In Progress</a>
-                    <a href="" class="btn btn-success">Completed</a>
+                    {% if post.status == "Available" %}
+                        <a class="btn btn-success disabled" role="button" aria-disabled="true">Available</a>
+                        <a href="{{url_for('update_status', status='In Progress', post_id=post._id)}}" class="btn btn-warning">In Progress</a>
+                        <a href="{{url_for('update_status', status='Completed', post_id=post._id)}}" class="btn btn-primary">Completed</a>
+                    {% elif post.status == "In Progress" %}
+                        <a href="{{url_for('update_status', status='Available', post_id=post._id)}}" class="btn btn-success">Available</a>
+                        <a class="btn btn-warning disabled" role="button" aria-disabled="true">In Progress</a>
+                        <a href="{{url_for('update_status', status='Completed', post_id=post._id)}}" class="btn btn-primary">Completed</a>
+                    {% elif post.status == "Completed" %}
+                        <a href="{{url_for('update_status', status='Available', post_id=post._id)}}" class="btn btn-success">Available</a>
+                        <a href="{{url_for('update_status', status='In Progress', post_id=post._id)}}" class="btn btn-warning">In Progress</a>
+                        <a class="btn btn-primary disabled" role="button" aria-disabled="true">Completed</a>
+                    {% endif %}
 
                 </div>
                 </div>
