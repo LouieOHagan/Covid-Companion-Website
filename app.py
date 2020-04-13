@@ -106,20 +106,27 @@ def edit_post(post_id):
                         'phone_number': phone_number
                         }
         update_post = mongo.db.posts
-        update_post.update({"_id": ObjectId(post_id)}, {'$set': updated_info})
+        update_post.update_one({"_id": ObjectId(post_id)},
+                               {'$set': updated_info})
         return redirect(url_for('give_help'))
 
 
 @app.route("/update-status/<post_id>/<status>/")
 def update_status(status, post_id):
     if status == "Available":
-        print("Updating Status to Available for " + post_id)
+        update_status = mongo.db.posts
+        update_status.update_one({"_id": ObjectId(post_id)},
+                                 {'$set': {'status': "Available"}})
         return redirect(url_for('give_help'))
     elif status == "In Progress":
-        print("Updating Status to In Progress for " + post_id)
+        update_status = mongo.db.posts
+        update_status.update_one({"_id": ObjectId(post_id)},
+                                 {'$set': {'status': "In Progress"}})
         return redirect(url_for('give_help'))
     elif status == "Completed":
-        print("Updating Status to Completed for " + post_id)
+        update_status = mongo.db.posts
+        update_status.update_one({"_id": ObjectId(post_id)},
+                                 {'$set': {'status': "Completed"}})
         return redirect(url_for('give_help'))
 
 
