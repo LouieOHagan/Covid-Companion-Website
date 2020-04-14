@@ -39,12 +39,21 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('get_help') }}">Get Help</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('login') }}">Login</a>
-                    </li>
-                    <li class="nav-btn nav-item">
-                        <a class="nav-link" href="{{ url_for('sign_up') }}">Sign Up Free</a>
-                    </li>
+                    {% if session['logged-in'] %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+                        </li>
+                        <li class="nav-btn nav-item">
+                            <a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                        </li>
+                        <li class="nav-btn nav-item">
+                            <a class="nav-link" href="{{ url_for('sign_up') }}">Sign Up Free</a>
+                        </li>
+                    {% endif %}
                 </ul>
             </div>
             <!-- / .Navigation Bar Links -->
@@ -64,12 +73,21 @@
             <li>
                 <a href="{{ url_for('get_help') }}"><i class="fas fa-info"></i>Get Help</a>
             </li>
-            <li>
-                <a href="{{ url_for('login') }}"><i class="fas fa-sign-in-alt"></i>Login</a>
-            </li>
-            <li>
-                <a href="{{ url_for('sign_up') }}"><i class="fas fa-users"></i>Sign Up</a>
-            </li>
+            {% if session['logged-in'] %}
+                <li>
+                    <a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('dashboard') }}"><i class="fas fa-edit"></i>Dashboard</a>
+                </li>
+            {% else %}
+                <li>
+                    <a href="{{ url_for('login') }}"><i class="fas fa-sign-in-alt"></i>Login</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('sign_up') }}"><i class="fas fa-users"></i>Sign Up</a>
+                </li>
+            {% endif %}
         </ul>
     </div>
     <!-- /. Small Screen Bottom Navigation Bar -->

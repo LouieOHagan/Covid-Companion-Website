@@ -27,7 +27,6 @@ def check_logged_in(func):
 
 
 @app.route("/")
-@check_logged_in
 def home():
     return render_template("index.html", title="Home")
 
@@ -97,7 +96,7 @@ def logout():
 @app.route("/dashboard")
 @check_logged_in
 def dashboard():
-    return render_template("dashboard.html")
+    return render_template("dashboard.html", title="Dashboard")
 
 
 @app.route("/update-profile")

@@ -1,4 +1,8 @@
-<h1>This is the dashboard template</h1>
-<p>Testing</p>
+{% extends 'base.html' %}
 
-Welcome {{session['username']}}
+{% block title %}{{session['first_name']}} {{session['last_name']}} - {{ title }} | Covid Companion{% endblock %}
+
+{% block content %}
+    <h1>Welcome {{session['first_name']}},</h1>
+{% endblock %}
+
