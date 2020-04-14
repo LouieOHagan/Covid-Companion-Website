@@ -105,6 +105,7 @@ def update_profile():
 
 
 @app.route("/get-help", methods=["GET", "POST"])
+@check_logged_in
 def get_help():
     if request.method == "GET":
         counties = mongo.db.counties.find()
@@ -140,6 +141,7 @@ def get_help():
 
 
 @app.route("/edit-post/<post_id>", methods=["GET", "POST"])
+@check_logged_in
 def edit_post(post_id):
     if request.method == "GET":
         post_info = mongo.db.posts.find_one({"_id": ObjectId(post_id)})
@@ -177,6 +179,7 @@ def edit_post(post_id):
 
 
 @app.route("/update-status/<post_id>/<status>/")
+@check_logged_in
 def update_status(status, post_id):
     if status == "Available":
         update_status = mongo.db.posts
@@ -196,6 +199,7 @@ def update_status(status, post_id):
 
 
 @app.route("/remove-post-confirmation/<post_id>")
+@check_logged_in
 def remove_post_confirmation(post_id):
     post_name = mongo.db.posts.find_one({"_id": ObjectId(post_id)})
     return render_template("remove-post.html",
@@ -204,12 +208,14 @@ def remove_post_confirmation(post_id):
 
 
 @app.route("/remove-post/<post_id>")
+@check_logged_in
 def remove_post(post_id):
     mongo.db.posts.remove({"_id": ObjectId(post_id)})
     return redirect(url_for('give_help'))
 
 
 @app.route("/give-help")
+@check_logged_in
 def give_help():
     posts = mongo.db.posts.find()
     return render_template("give-help.html", title="Give Help", posts=posts)
