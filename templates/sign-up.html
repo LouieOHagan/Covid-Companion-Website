@@ -1,2 +1,84 @@
-<h1>This is the sign up template</h1>
-<p>Testing</p>
+{% extends 'base.html' %}
+
+{% block title %}{{ title }} | Covid Companion{% endblock %}
+
+{% block content %}
+    <!-- <form action="{{url_for('sign_up')}}" method="POST">
+
+    <label for="">Username</label>
+    <input type="text">
+    
+    </form> -->
+
+    <div class="container">
+            <div class="row">
+                <!-- Sign Up Card Title -->
+                <div class="col-6 col-md-5 col-lg-4 title-card">
+                    <h2>Create Account</h2>
+                </div>
+                <!-- / .Sign Up Card Title -->
+            </div>
+            <div class="row">
+                <!-- Sign Up Card Content -->
+                <div class="col-11 col-sm-12 col-md-10 col-lg-8 form-card">
+                    <form class="form-section" action="{{url_for('sign_up')}}" method="POST">
+                        <!-- First Name Input -->
+                        <div class="form-group">
+                            <label for="fname">First Name:</label>
+                            <input type="text" class="input-field" name="fname" id="fname" required>
+                        </div>
+                        <!-- Last Name Input -->
+                        <div class="form-group">
+                            <label for="lname">Last Name:</label>
+                            <input type="text" class="input-field" name="lname" id="lname" required>
+                        </div>
+                        <!-- Email Input -->
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="input-field" name="email" id="email" required>
+                        </div>
+                        <!-- Password Input -->
+                        <div class="form-group">
+                            <label for="pword">Password:</label>
+                            <input type="password" class="input-field" name="pword" id="pword" required>
+                        </div>
+                        <!-- Confirm Password Input -->
+                        <div class="form-group">
+                            <label for="confirm-pword">Confirm Password:</label>
+                            <input type="password" class="input-field" name="confirm-pword" id="confirm-pword" required>
+                        </div>
+                        <!-- Phone Input -->
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="text" class="input-field" name="phone" id="phone" required>
+                        </div>
+                        <!-- Address Input -->
+                        <div class="form-group">
+                            <label for="address">Address:</label>
+                            <input type="text" class="input-field" name="address" id="address" required>
+                        </div>
+                        <!-- User Type Input -->
+                        <div class="form-group">
+                            <label for="user_type">User Type</label>
+                            <select class="input-field select-field" id="user_type" name="user_type" required>
+                                <option value="" disabled selected>Select account type</option>
+                                <option value="Volunteer">Volunteer</option>
+                                <option value="Vulnerable">Vulnerable</option>
+                            </select>
+                        </div>
+                        <!-- Age Confirmation Input -->
+                        <div class="form-check form-group">
+                            <input class="form-check-input checkbox-field" type="checkbox" name="age_confirmation" id="age_confirmation" required>
+                            <label class="form-check-label" for="age_confirmation">
+                                I confirm I am over the age of 18
+                            </label>
+                        </div>
+                        <!-- Submit Button -->
+                        <input type="submit" class="submit-btn" value="Sign Up">
+                    </form>
+                </div>
+                <!-- / .Sign Up Card Content -->
+            </div> 
+        </div>
+        <!-- / .Sign Up Card Section -->
+{% endblock %}

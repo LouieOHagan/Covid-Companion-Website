@@ -1,5 +1,6 @@
 import os
-from flask import Flask, render_template, request, url_for, redirect
+from functools import wraps
+from flask import Flask, render_template, request, url_for, redirect, session
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from os import path
@@ -14,14 +15,25 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 mongo = PyMongo(app)
 
 
+def check_logged_in(func):
+    @wraps(func)
+    def wrapped_function(*args, **kwargs):
+        if 'logged-in' in session:
+            return(func(*args, **kwargs))
+        else:
+            return render_template('access-denied.html', title="Access Denied")
+    return wrapped_function
+
+
 @app.route("/")
+@check_logged_in
 def home():
     return render_template("index.html", title="Home")
 
 
 @app.route("/sign-up")
 def sign_up():
-    return render_template("sign-up.html")
+    return render_template("sign-up.html", title="Sign Up for Free")
 
 
 @app.route("/login")
