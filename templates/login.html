@@ -1,2 +1,44 @@
-<h1>This is the Login template</h1>
-<p>Testing</p>
+{% extends 'base.html' %}
+
+{% block title %}{{ title }} | Covid Companion{% endblock %}
+
+{% block content %}
+    <!-- <form action="{{url_for('sign_up')}}" method="POST">
+
+    <label for="">Username</label>
+    <input type="text">
+    
+    </form> -->
+<div class="background-image get-help-background">
+    <div class="container">
+        <div class="row">
+            <!-- Login Card Title -->
+            <div class="col-6 col-md-5 col-lg-4 title-card">
+                <h2>Login</h2>
+            </div>
+            <!-- / .Login Card Title -->
+        </div>
+        <div class="row">
+            <!-- Login Card Content -->
+            <div class="col-11 col-sm-12 col-md-10 col-lg-8 form-card">
+                <form class="form-section" action="{{url_for('login')}}" method="POST">
+                    <!-- Email Input -->
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="input-field" name="email" id="email" required>
+                    </div>
+                    <!-- Password Input -->
+                    <div class="form-group">
+                        <label for="pword">Password:</label>
+                        <input type="password" class="input-field" name="pword" id="pword" required>
+                    </div>
+                    <!-- Submit Button -->
+                    <input type="submit" class="submit-btn" value="Login">
+                </form>
+            </div>
+            <!-- / .Login Card Content -->
+        </div> 
+    </div>
+    <!-- / .Login Card Section -->
+</div>
+{% endblock %}
