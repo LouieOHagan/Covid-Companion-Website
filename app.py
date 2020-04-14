@@ -3,6 +3,7 @@ from functools import wraps
 from flask import Flask, render_template, request, url_for, redirect, session
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from passlib.hash import pbkdf2_sha256
 from os import path
 if path.exists("env.py"):
     import env
@@ -31,9 +32,33 @@ def home():
     return render_template("index.html", title="Home")
 
 
-@app.route("/sign-up")
+@app.route("/sign-up", methods=["GET", "POST"])
 def sign_up():
-    return render_template("sign-up.html", title="Sign Up for Free")
+    if request.method == "GET":
+        return render_template("sign-up.html", title="Sign Up for Free")
+    if request.method == "POST":
+        first_name = request.form["fname"]
+        last_name = request.form["lname"]
+        user_email = request.form["email"]
+        password = request.form["pword"]
+        user_phone = request.form["phone"]
+        user_address = request.form["address"]
+        user_type = request.form["user_type"]
+        is_over_18 = request.form["age_confirmation"]
+        hash = pbkdf2_sha256.hash(password)
+
+        new_user = {'first_name': first_name,
+                    'last_name': last_name,
+                    'user_email': user_email,
+                    'password': hash,
+                    'user_phone': user_phone,
+                    'user_address': user_address,
+                    'user_type': user_type,
+                    'is_over_18': is_over_18
+                    }
+
+        mongo.db.users.insert_one(new_user)
+        return redirect(url_for('login'))
 
 
 @app.route("/login")
