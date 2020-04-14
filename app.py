@@ -72,7 +72,8 @@ def login():
         user_password = user['password']
         if pbkdf2_sha256.verify(form_password, user_password):
             session['logged-in'] = True
-            session['username'] = user['first_name'] + user['last_name']
+            session['first_name'] = user['first_name']
+            session['last_name'] = user['last_name']
             session['user_email'] = form_email
             session['user_phone'] = user['user_phone']
             session['user_address'] = user['user_address']
@@ -80,7 +81,21 @@ def login():
         return redirect(url_for('dashboard'))
 
 
+@app.route("/logout")
+@check_logged_in
+def logout():
+    session.pop('logged-in', None)
+    session.pop('first_name', None)
+    session.pop('last_name', None)
+    session.pop('user_email', None)
+    session.pop('user_phone', None)
+    session.pop('user_address', None)
+    session.pop('user_type', None)
+    return redirect(url_for('login'))
+
+
 @app.route("/dashboard")
+@check_logged_in
 def dashboard():
     return render_template("dashboard.html")
 
