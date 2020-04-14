@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-
+app.config["SECRET_KEY"] = os.environ["SECRET_KEY"]
 mongo = PyMongo(app)
 
 
@@ -58,13 +58,26 @@ def sign_up():
                     }
 
         mongo.db.users.insert_one(new_user)
-        return redirect(url_for('login'))
+        return redirect(url_for('dashboard'))
 
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "GET":
         return render_template("login.html", title="Login")
+    if request.method == "POST":
+        form_email = request.form["email"]
+        user = mongo.db.users.find_one({'user_email': form_email})
+        form_password = request.form["pword"]
+        user_password = user['password']
+        if pbkdf2_sha256.verify(form_password, user_password):
+            session['logged-in'] = True
+            session['username'] = user['first_name'] + user['last_name']
+            session['user_email'] = form_email
+            session['user_phone'] = user['user_phone']
+            session['user_address'] = user['user_address']
+            session['user_type'] = user['user_type']
+        return redirect(url_for('dashboard'))
 
 
 @app.route("/dashboard")
