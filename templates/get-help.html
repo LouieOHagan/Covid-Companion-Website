@@ -52,22 +52,22 @@
                         <!-- Address Input -->
                         <div class="form-group">
                             <label for="address">Delivery Address:</label>
-                            <input type="text" class="input-field" name="address" id="address" required>
+                            <input type="text" class="input-field" name="address" id="address" value="{{ session['user_address'] }}" required>
                         </div>
                         <!-- Name Input -->
                         <div class="form-group">
                             <label for="name">Full Name:</label>
-                            <input type="text" class="input-field" name="name" id="name" required>
+                            <input type="text" class="input-field" name="name" id="name" value="{{ session['first_name'] }} {{ session['last_name'] }}" required>
                         </div>
                         <!-- Email Input -->
                         <div class="form-group">
                             <label for="email">Email:</label>
-                            <input type="email" class="input-field" name="email" id="email" required>
+                            <input type="email" class="input-field" name="email" id="email" value="{{ session['user_email'] }}" required>
                         </div>
                         <!-- Phone Input -->
                         <div class="form-group">
                             <label for="phone">Phone Number:</label>
-                            <input type="text" class="input-field" name="phone" id="phone" required>
+                            <input type="text" class="input-field" name="phone" id="phone" value="{{ session['user_phone'] }}" required>
                         </div>
                         <!-- Submit Button -->
                         <input type="submit" class="submit-btn" value="Post">
