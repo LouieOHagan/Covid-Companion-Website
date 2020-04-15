@@ -9,11 +9,11 @@
     <input type="text">
     
     </form> -->
-
+<div class="background-image sign-up-background">
     <div class="container">
             <div class="row">
                 <!-- Sign Up Card Title -->
-                <div class="col-6 col-md-5 col-lg-4 title-card">
+                <div class="col-6 col-md-5 col-lg-4 title-card signup-card">
                     <h2>Create Account</h2>
                 </div>
                 <!-- / .Sign Up Card Title -->
@@ -21,6 +21,7 @@
             <div class="row">
                 <!-- Sign Up Card Content -->
                 <div class="col-11 col-sm-12 col-md-10 col-lg-8 form-card">
+                    <i class="far fa-user-circle user-icon"></i>
                     <form class="form-section" action="{{url_for('sign_up')}}" method="POST">
                         <!-- First Name Input -->
                         <div class="form-group">
@@ -81,4 +82,5 @@
             </div> 
         </div>
         <!-- / .Sign Up Card Section -->
+</div>
 {% endblock %}

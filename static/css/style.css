@@ -224,15 +224,23 @@ body {
 }
 
 .confirmation-background {
-    background: url(../images/back-3.jpg) center/cover no-repeat fixed;
+    background: url(../images/back-2.jpg) center/cover no-repeat fixed;
 }
 
 .edit-post-background {
-    background: url(../images/back-4.jpg) center/cover no-repeat fixed;
+    background: url(../images/back-3.jpg) center/cover no-repeat fixed;
 }
 
 .give-help-background {
+    background: url(../images/back-4.jpg) center/cover no-repeat fixed;
+}
+
+.login-background {
     background: url(../images/back-5.jpg) center/cover no-repeat fixed;
+}
+
+.sign-up-background {
+    background: url(../images/back-6.jpg) center/cover no-repeat fixed;
 }
 
 /* --------------------------Page Cards */
@@ -329,6 +337,16 @@ body {
 .cancel-button:hover {
     background: #363636;
     border: 2px solid grey;
+}
+
+/* --------------------------Login & Signup */
+.user-icon {
+    color: #feb62e;
+    font-size: 140px;
+    text-align: center;
+    display: block;
+    margin: 35px auto 5px;
+
 }
 
 /* --------------------------Get Help Page */
@@ -431,6 +449,12 @@ body {
         font-size: 23px;
     }
 
+    /* --- Login & Signup */
+    .user-icon {
+        font-size: 120px;
+        margin: 30px auto 0px;
+    }
+
     /* --- Get Help Page */
     .input-field {
         margin-bottom: 10px;
@@ -482,7 +506,7 @@ body {
         font-size: 15px;
     }
 
-    /* --- Get Help Page */
+        /* --- Get Help Page */
 
     .title-card h2 {
         font-size: 23px;
@@ -503,6 +527,20 @@ body {
     .input-field {
         font-size: 17px;
         height: 36px;
+    }
+
+    /* --- Login & Signup */
+    .user-icon {
+        font-size: 100px;
+        margin: 25px auto -5px;
+    }
+
+    .signup-card h2 {
+        font-size: 20px
+    }
+
+    .login-card h2 {
+        font-size: 30px;
     }
 }
 
@@ -558,6 +596,20 @@ body {
     .input-field {
         font-size: 16px;
     }
+
+    /* --- Login & Signup */
+    .user-icon {
+        font-size: 85px;
+        margin: 20px auto -10px;
+    }
+
+    .signup-card h2 {
+        font-size: 15px
+    }
+
+    .login-card h2 {
+        font-size: 23px;
+    }
 }
 
 /* Active for screen sizes under 292px */
@@ -610,5 +662,19 @@ body {
     .input-field {
         font-size: 13px;
         padding: 5px 0;
+    }
+
+    /* --- Login & Signup */
+    .signup-card h2 {
+        font-size: 18px
+    }
+
+    .login-card h2 {
+        font-size: 23px;
+    }
+
+    .user-icon {
+        font-size: 70px;
+        margin: 20px auto -10px;
     }
 }
