@@ -138,10 +138,11 @@ body {
 /* --------------------------Footer */
 
 .footer-base {
-    height: 200px;
-    background: url(../images/foot.png) bottom no-repeat;
+    height: 220px;
+    background: url(../images/foot2.png) bottom no-repeat;
     position: relative;
     bottom: 0px;
+    width: 100%;
 }
 
 .connect-icons{
@@ -216,7 +217,7 @@ body {
 
 .background-image {
     width: 100%;
-    min-height: 700px;
+    min-height: 73vh;
 }
 
 .get-help-background {
@@ -651,8 +652,8 @@ body {
     }
 
     .submit-btn {
-        width: 125px;
-        padding: 5px 0;
+        width: 115px;
+        padding: 3px 0;
     }
 
     .select-field {
@@ -676,5 +677,23 @@ body {
     .user-icon {
         font-size: 70px;
         margin: 20px auto -10px;
+    }
+}
+
+/* Active for screen sizes between 1700px and 1390px in height */
+/* Used to get rid of white gaps underneath footer on bigger sized screens */
+@media (max-height: 1700px) and (min-height: 1390px) {
+    .background-image {
+        width: 100%;
+        min-height: 83vh;
+    }
+}
+
+/* Active for screen sizes between 1390px and 1080px in height */
+/* Used to get rid of white gaps underneath footer on bigger sized screens */
+@media (max-height: 1390px) and (min-height: 1080px) {
+    .background-image {
+        width: 100%;
+        min-height: 80vh;
     }
 }
