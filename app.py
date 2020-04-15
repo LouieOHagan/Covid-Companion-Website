@@ -77,6 +77,7 @@ def login():
         user_password = user['password']
         if pbkdf2_sha256.verify(form_password, user_password):
             session['logged-in'] = True
+            session['user_id'] = str(user['_id'])
             session['first_name'] = user['first_name']
             session['last_name'] = user['last_name']
             session['user_email'] = form_email
@@ -90,6 +91,7 @@ def login():
 @check_logged_in
 def logout():
     session.pop('logged-in', None)
+    session.pop('user_id', None)
     session.pop('first_name', None)
     session.pop('last_name', None)
     session.pop('user_email', None)
@@ -139,7 +141,8 @@ def get_help():
                     'name': name,
                     'email': email,
                     'phone_number': phone_number,
-                    'status': 'Available'
+                    'status': 'Available',
+                    'post_creator': session['user_id']
                     }
 
         mongo.db.posts.insert_one(new_post)
