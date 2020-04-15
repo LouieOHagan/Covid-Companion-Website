@@ -34,7 +34,10 @@ def home():
 @app.route("/sign-up", methods=["GET", "POST"])
 def sign_up():
     if request.method == "GET":
-        return render_template("sign-up.html", title="Sign Up for Free")
+        if 'logged-in' in session:
+            return redirect(url_for('dashboard'))
+        else:
+            return render_template("sign-up.html", title="Sign Up for Free")
     if request.method == "POST":
         first_name = request.form["fname"]
         last_name = request.form["lname"]
@@ -63,7 +66,10 @@ def sign_up():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "GET":
-        return render_template("login.html", title="Login")
+        if 'logged-in' in session:
+            return redirect(url_for('dashboard'))
+        else:
+            return render_template("login.html", title="Login")
     if request.method == "POST":
         form_email = request.form["email"]
         user = mongo.db.users.find_one({'user_email': form_email})
