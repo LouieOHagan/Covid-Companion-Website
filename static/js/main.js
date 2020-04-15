@@ -1,5 +1,3 @@
-document.getElementById("clickAndCollect").addEventListener("click", toggleClickAndCollect)
-
 function toggleClickAndCollect() {
   let checkBox = document.getElementById("clickAndCollect");
   let orderNumber = document.getElementById("orderNumberSection");

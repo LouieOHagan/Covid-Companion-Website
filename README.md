@@ -36,7 +36,8 @@ Project preview/showcase
 - Add content and styling for dashboard
 - Create edit profile page
 - Complete README.md
-- Put main.js file src in get-help page and out of base.html to get rid of console log error of id not being detected.
+- ~~Fix site wide console error of id not being detected caused by eventlistenerID in main.js.~~ - **Implemented 15/04/20**
+- ~~Fix border radius bug that appears on iphones with all input field border radius visible.~~ - **Implemented 15/04/20**
 - Add more commenting on all code
 	- Specifically the app.py file
 
