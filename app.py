@@ -60,7 +60,7 @@ def sign_up():
                     }
 
         mongo.db.users.insert_one(new_user)
-        return redirect(url_for('dashboard'))
+        return redirect(url_for('login'))
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -154,10 +154,13 @@ def get_help():
 def edit_post(post_id):
     if request.method == "GET":
         post_info = mongo.db.posts.find_one({"_id": ObjectId(post_id)})
-        counties = mongo.db.counties.find()
-        return render_template("edit-post.html", title="Edit Post",
-                               post=post_info,
-                               counties=counties)
+        if session['user_id'] == post_info['post_creator']:
+            counties = mongo.db.counties.find()
+            return render_template("edit-post.html", title="Edit Post",
+                                   post=post_info,
+                                   counties=counties)
+        else:
+            return render_template('not-your-post.html')
 
     if request.method == "POST":
         title = request.form["title"]
@@ -211,16 +214,23 @@ def update_status(status, post_id):
 @check_logged_in
 def remove_post_confirmation(post_id):
     post_name = mongo.db.posts.find_one({"_id": ObjectId(post_id)})
-    return render_template("remove-post.html",
-                           title="Remove Post Confirmation",
-                           post=post_name)
+    if session['user_id'] == post_name['post_creator']:
+        return render_template("remove-post.html",
+                               title="Remove Post Confirmation",
+                               post=post_name)
+    else:
+        return render_template('not-your-post.html')
 
 
 @app.route("/remove-post/<post_id>")
 @check_logged_in
 def remove_post(post_id):
-    mongo.db.posts.remove({"_id": ObjectId(post_id)})
-    return redirect(url_for('give_help'))
+    post_name = mongo.db.posts.find_one({"_id": ObjectId(post_id)})
+    if session['user_id'] == post_name['post_creator']:
+        mongo.db.posts.delete_one({"_id": ObjectId(post_id)})
+        return redirect(url_for('give_help'))
+    else:
+        return render_template('not-your-post.html')
 
 
 @app.route("/give-help")
