@@ -1,6 +1,6 @@
 import os
 from functools import wraps
-from flask import Flask, render_template, request, url_for, redirect, session
+from flask import Flask, render_template, request, url_for, redirect, session, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from passlib.hash import pbkdf2_sha256
@@ -79,7 +79,10 @@ def login():
         if pbkdf2_sha256.verify(form_password, user_password):
             session['logged-in'] = True
             session['user_id'] = str(user['_id'])
-        return redirect(url_for('dashboard'))
+            return redirect(url_for('dashboard'))
+        else:
+            flash("Incorrect Password")
+            return redirect(url_for('login'))
 
 
 @app.route("/logout")

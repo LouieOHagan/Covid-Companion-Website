@@ -20,6 +20,26 @@ body {
     padding: 0;
 }
 
+/* --------------------------Flash Messages */
+
+.flash-message-bar {
+    margin: auto;
+}
+
+.flash-message {
+    background-color: #feb62e;
+    border-color: #feb62e;
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    color: #3c3c3c;
+}
+
+.fade {
+    transition: opacity .3s linear;
+}
+
 /* --------------------------Navbar */
 
 .logo{
@@ -445,6 +465,15 @@ body {
 /* Active for screen sizes under 768px */
 @media (max-width: 768px) {
 
+    /* --- Flash Messages */
+    .flash-message {
+        padding: 0.625rem 1.25rem;
+    }
+
+    .flash-message .close-btn {
+        padding: 0.625rem 1.25rem;
+    }
+
     /* --- Remove Post Confirmation Page */
     .confirmation-card h2 {
         font-size: 23px;
@@ -481,6 +510,16 @@ body {
 /* Active for screen sizes under 576px */
 @media (max-width:576px) {
 
+    /* --- Flash Messages */
+    .flash-message {
+        padding: 0.525rem 1.25rem;
+        font-size: 16px;
+    }
+
+    .flash-message .close-btn {
+        padding: 0.525rem 1.25rem;
+    }
+
     /* --- Footer */
     .connect-icons li i {
         font-size: 18px;
@@ -507,7 +546,7 @@ body {
         font-size: 15px;
     }
 
-        /* --- Get Help Page */
+    /* --- Get Help Page */
 
     .title-card h2 {
         font-size: 23px;
@@ -547,6 +586,16 @@ body {
 
 /* Active for screen sizes under 350px */
 @media (max-width: 350px) {
+
+    /* --- Flash Messages */
+    .flash-message {
+        padding: 0.425rem 1.25rem;
+        font-size: 14px;
+    }
+
+    .flash-message .close-btn {
+        padding: 0.22rem 1.25rem;
+    }
 
     /* --- Small Device Navbar */
     .phone-nav ul {
@@ -616,6 +665,11 @@ body {
 /* Active for screen sizes under 292px */
 @media (max-width:292px) {
 
+    /* --- Flash Messages */
+    .flash-message {
+        font-size: 12px;
+    }
+
     /* --- Footer */
     .footer-base {
         height: 230px;
@@ -677,6 +731,11 @@ body {
     .user-icon {
         font-size: 70px;
         margin: 20px auto -10px;
+    }
+
+    /* --- Get Help Page */
+    .login-card {
+        margin: 20px auto 0;
     }
 }
 
