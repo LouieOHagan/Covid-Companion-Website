@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}{{session['first_name']}} {{session['last_name']}} - {{ title }} | Covid Companion{% endblock %}
+{% block title %}{{ user.first_name }} {{ user.last_name }} - {{ title }} | Covid Companion{% endblock %}
 
 {% block content %}
 <div class="background-image sign-up-background">
@@ -16,38 +16,38 @@
                 <!-- Sign Up Card Content -->
                 <div class="col-11 col-sm-12 col-md-10 col-lg-8 form-card">
                     <i class="far fa-user-circle user-icon"></i>
-                    <form class="form-section" action="{{url_for('sign_up')}}" method="POST">
+                    <form class="form-section" action="{{url_for('edit_profile')}}" method="POST">
                         <!-- First Name Input -->
                         <div class="form-group">
                             <label for="fname">First Name:</label>
-                            <input type="text" class="input-field" name="fname" id="fname" value="{{ session['first_name'] }}" required>
+                            <input type="text" class="input-field" name="fname" id="fname" value="{{ user.first_name }}" required>
                         </div>
                         <!-- Last Name Input -->
                         <div class="form-group">
                             <label for="lname">Last Name:</label>
-                            <input type="text" class="input-field" name="lname" id="lname" value="{{ session['last_name'] }}" required>
+                            <input type="text" class="input-field" name="lname" id="lname" value="{{ user.last_name }}" required>
                         </div>
                         <!-- Email Input -->
                         <div class="form-group">
                             <label for="email">Email:</label>
-                            <input type="email" class="input-field" name="email" id="email" value="{{ session['user_email'] }}" required>
+                            <input type="email" class="input-field" name="email" id="email" value="{{ user.user_email }}" required>
                         </div>
                         <!-- Phone Input -->
                         <div class="form-group">
                             <label for="phone">Phone Number:</label>
-                            <input type="text" class="input-field" name="phone" id="phone" value="{{ session['user_phone'] }}" required>
+                            <input type="text" class="input-field" name="phone" id="phone" value="{{ user.user_phone }}" required>
                         </div>
                         <!-- Address Input -->
                         <div class="form-group">
                             <label for="address">Address:</label>
-                            <input type="text" class="input-field" name="address" id="address" value="{{ session['user_address'] }}" required>
+                            <input type="text" class="input-field" name="address" id="address" value="{{ user.user_address }}" required>
                         </div>
                         <!-- User Type Input -->
                         <div class="form-group">
                             <label for="user_type">User Type</label>
                             <select class="input-field select-field" id="user_type" name="user_type" required>
-                                <option value="{{ session['user_type'] }}">{{ session['user_type'] }}</option>
-                                {% if session['user_type'] == "Volunteer" %}
+                                <option value="{{ user.user_type }}">{{ user.user_type }}</option>
+                                {% if user.user_type == "Volunteer" %}
                                     <option value="Vulnerable">Vulnerable</option>
                                 {% else %}
                                     <option value="Volunteer">Volunteer</option>

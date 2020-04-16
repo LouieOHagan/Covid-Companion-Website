@@ -10,6 +10,7 @@ if path.exists("env.py"):
 
 app = Flask(__name__)
 
+app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.config["SECRET_KEY"] = os.environ["SECRET_KEY"]
@@ -78,12 +79,6 @@ def login():
         if pbkdf2_sha256.verify(form_password, user_password):
             session['logged-in'] = True
             session['user_id'] = str(user['_id'])
-            session['first_name'] = user['first_name']
-            session['last_name'] = user['last_name']
-            session['user_email'] = form_email
-            session['user_phone'] = user['user_phone']
-            session['user_address'] = user['user_address']
-            session['user_type'] = user['user_type']
         return redirect(url_for('dashboard'))
 
 
@@ -92,36 +87,39 @@ def login():
 def logout():
     session.pop('logged-in', None)
     session.pop('user_id', None)
-    session.pop('first_name', None)
-    session.pop('last_name', None)
-    session.pop('user_email', None)
-    session.pop('user_phone', None)
-    session.pop('user_address', None)
-    session.pop('user_type', None)
     return redirect(url_for('login'))
 
 
 @app.route("/dashboard")
 @check_logged_in
 def dashboard():
-    return render_template("dashboard.html", title="Dashboard")
+    user_id = session['user_id']
+    user_info = mongo.db.users.find_one({"_id": ObjectId(user_id)})
+    return render_template("dashboard.html", title="Dashboard", user=user_info)
 
 
-@app.route("/edit-profile/<user_id>", methods=["GET", "POST"])
+@app.route("/edit-profile", methods=["GET", "POST"])
 @check_logged_in
-def edit_profile(user_id):
+def edit_profile():
     if request.method == "GET":
-        return render_template("edit-profile.html", title="Edit Profile")
+        user_id = session['user_id']
+        user_info = mongo.db.users.find_one({"_id": ObjectId(user_id)})
+        return render_template("edit-profile.html",
+                               title="Edit Profile",
+                               user=user_info)
 
 
 @app.route("/get-help", methods=["GET", "POST"])
 @check_logged_in
 def get_help():
     if request.method == "GET":
+        user_id = session['user_id']
+        user_info = mongo.db.users.find_one({"_id": ObjectId(user_id)})
         counties = mongo.db.counties.find()
         return render_template("get-help.html",
                                title="Get Help",
-                               counties=counties)
+                               counties=counties,
+                               user=user_info)
     if request.method == "POST":
         title = request.form["title"]
         description = request.form["description"]
