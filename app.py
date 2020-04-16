@@ -86,16 +86,21 @@ def login():
             return render_template("login.html", title="Login")
     if request.method == "POST":
         form_email = request.form["email"]
-        user = mongo.db.users.find_one({'user_email': form_email})
-        form_password = request.form["pword"]
-        user_password = user['password']
-        if pbkdf2_sha256.verify(form_password, user_password):
-            session['logged-in'] = True
-            session['user_id'] = str(user['_id'])
-            return redirect(url_for('dashboard'))
-        else:
-            flash("Incorrect Password")
+        user_check = mongo.db.users.find_one({'user_email': form_email})
+
+        if user_check is None:
+            flash("Email Address not found")
             return redirect(url_for('login'))
+        else:
+            form_password = request.form["pword"]
+            user_password = user_check['password']
+            if pbkdf2_sha256.verify(form_password, user_password):
+                session['logged-in'] = True
+                session['user_id'] = str(user_check['_id'])
+                return redirect(url_for('dashboard'))
+            else:
+                flash("Incorrect Password")
+                return redirect(url_for('login'))
 
 
 @app.route("/logout")
