@@ -34,7 +34,7 @@ Project preview/showcase
 - Hero image for home page
 - Content for home page
 - Add content and styling for dashboard
-- Create edit profile page
+- ~~Create edit profile page~~ - **Implemented 16/04/20**
 - Complete README.md
 - ~~Fix site wide console error of id not being detected caused by eventlistenerID in main.js.~~ - **Implemented 15/04/20**
 - ~~Fix border radius bug that appears on iphones with all input field border radius visible.~~ - **Implemented 15/04/20**
@@ -54,7 +54,7 @@ Project preview/showcase
 - Filter by county section
 - For email, instead of doing basic herf, toggle modal that gives option to copy email to clipboard OR mailto:
 	- or just copy to clipboard and get rid of href="mailto:"
-###### Last Updated: 7:22pm GMT - 15/04/20 
+###### Last Updated: 10:12pm GMT - 16/04/20 
 
 ### Features Left to Implement
 ##### These are features that have not been added at the time of development due to various reasons such as time limitations.

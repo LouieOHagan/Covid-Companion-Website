@@ -6,6 +6,22 @@
 <div class="background-image sign-up-background">
     <div class="container">
             <div class="row">
+            <div class="col-11 col-sm-12 col-md-10 col-lg-8 flash-message-bar">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-dismissible fade show flash-message" role="alert">
+                                {{ message }}
+                                <button type="button" class="close close-btn" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </div>
+        </div>
+            <div class="row">
                 <!-- Sign Up Card Title -->
                 <div class="col-6 col-md-5 col-lg-4 title-card signup-card">
                     <h2>Create Account</h2>

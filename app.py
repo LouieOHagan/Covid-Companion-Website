@@ -1,6 +1,7 @@
 import os
 from functools import wraps
-from flask import Flask, render_template, request, url_for, redirect, session, flash
+from flask import Flask, render_template, request, url_for, redirect, session,\
+    flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from passlib.hash import pbkdf2_sha256
@@ -40,28 +41,34 @@ def sign_up():
         else:
             return render_template("sign-up.html", title="Sign Up for Free")
     if request.method == "POST":
-        first_name = request.form["fname"]
-        last_name = request.form["lname"]
         user_email = request.form["email"]
-        password = request.form["pword"]
-        user_phone = request.form["phone"]
-        user_address = request.form["address"]
-        user_type = request.form["user_type"]
-        is_over_18 = request.form["age_confirmation"]
-        hash = pbkdf2_sha256.hash(password)
+        email_check = mongo.db.users.find_one({'user_email': user_email})
 
-        new_user = {'first_name': first_name,
-                    'last_name': last_name,
-                    'user_email': user_email,
-                    'password': hash,
-                    'user_phone': user_phone,
-                    'user_address': user_address,
-                    'user_type': user_type,
-                    'is_over_18': is_over_18
-                    }
+        if email_check is None:
+            first_name = request.form["fname"]
+            last_name = request.form["lname"]
+            password = request.form["pword"]
+            user_phone = request.form["phone"]
+            user_address = request.form["address"]
+            user_type = request.form["user_type"]
+            is_over_18 = request.form["age_confirmation"]
+            hash = pbkdf2_sha256.hash(password)
 
-        mongo.db.users.insert_one(new_user)
-        return redirect(url_for('login'))
+            new_user = {'first_name': first_name,
+                        'last_name': last_name,
+                        'user_email': user_email,
+                        'password': hash,
+                        'user_phone': user_phone,
+                        'user_address': user_address,
+                        'user_type': user_type,
+                        'is_over_18': is_over_18
+                        }
+
+            mongo.db.users.insert_one(new_user)
+            return redirect(url_for('login'))
+        else:
+            flash("Email Address already in use")
+            return redirect(url_for('sign_up'))
 
 
 @app.route("/login", methods=["GET", "POST"])
