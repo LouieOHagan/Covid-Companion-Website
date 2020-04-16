@@ -45,27 +45,33 @@ def sign_up():
         email_check = mongo.db.users.find_one({'user_email': user_email})
 
         if email_check is None:
-            first_name = request.form["fname"]
-            last_name = request.form["lname"]
             password = request.form["pword"]
-            user_phone = request.form["phone"]
-            user_address = request.form["address"]
-            user_type = request.form["user_type"]
-            is_over_18 = request.form["age_confirmation"]
-            hash = pbkdf2_sha256.hash(password)
+            confirm_password = request.form["confirm_pword"]
 
-            new_user = {'first_name': first_name,
-                        'last_name': last_name,
-                        'user_email': user_email,
-                        'password': hash,
-                        'user_phone': user_phone,
-                        'user_address': user_address,
-                        'user_type': user_type,
-                        'is_over_18': is_over_18
-                        }
+            if password == confirm_password:
+                first_name = request.form["fname"]
+                last_name = request.form["lname"]
+                user_phone = request.form["phone"]
+                user_address = request.form["address"]
+                user_type = request.form["user_type"]
+                is_over_18 = request.form["age_confirmation"]
+                hash = pbkdf2_sha256.hash(password)
 
-            mongo.db.users.insert_one(new_user)
-            return redirect(url_for('login'))
+                new_user = {'first_name': first_name,
+                            'last_name': last_name,
+                            'user_email': user_email,
+                            'password': hash,
+                            'user_phone': user_phone,
+                            'user_address': user_address,
+                            'user_type': user_type,
+                            'is_over_18': is_over_18
+                            }
+
+                mongo.db.users.insert_one(new_user)
+                return redirect(url_for('login'))
+            else:
+                flash("Passwords do not match")
+                return redirect(url_for('sign_up'))
         else:
             flash("Email Address already in use")
             return redirect(url_for('sign_up'))
