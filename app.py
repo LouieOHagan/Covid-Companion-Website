@@ -107,9 +107,11 @@ def dashboard():
     return render_template("dashboard.html", title="Dashboard")
 
 
-@app.route("/update-profile")
-def update_profile():
-    return render_template("update-profile.html")
+@app.route("/edit-profile/<user_id>", methods=["GET", "POST"])
+@check_logged_in
+def edit_profile(user_id):
+    if request.method == "GET":
+        return render_template("edit-profile.html", title="Edit Profile")
 
 
 @app.route("/get-help", methods=["GET", "POST"])

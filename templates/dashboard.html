@@ -4,5 +4,22 @@
 
 {% block content %}
     <h1>Welcome {{session['first_name']}},</h1>
+
+    <a href="{{url_for('edit_profile', user_id=session['user_id'])}}">
+        <div>
+            <i class="far fa-user-circle"></i>
+            <h2>Edit Profile</h2>
+        </div>
+    </a>
+
+    <a href="{{url_for('give_help')}}">
+        <div>
+            <i class="fas fa-shopping-basket"></i>
+            <h2>Get Help</h2>
+        </div>
+    </a>
+
+    <h2>Help Section: Instructions</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque voluptates fugit eveniet, ipsam vitae dolores officiis expedita! Quae, repudiandae aspernatur.</p>
 {% endblock %}
 

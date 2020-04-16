@@ -40,6 +40,7 @@ Project preview/showcase
 - ~~Fix border radius bug that appears on iphones with all input field border radius visible.~~ - **Implemented 15/04/20**
 - Add more commenting on all code
 	- Specifically the app.py file
+- Fix bug on Edge & explorer with label width stretching across whole screen.
 
 #### PRIORITY
 - Auto login when user creates account rather than redirecting to login page

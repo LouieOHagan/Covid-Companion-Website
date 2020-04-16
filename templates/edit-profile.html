@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ title }} | Covid Companion{% endblock %}
+{% block title %}{{session['first_name']}} {{session['last_name']}} - {{ title }} | Covid Companion{% endblock %}
 
 {% block content %}
 <div class="background-image sign-up-background">
@@ -8,7 +8,7 @@
             <div class="row">
                 <!-- Sign Up Card Title -->
                 <div class="col-6 col-md-5 col-lg-4 title-card signup-card">
-                    <h2>Create Account</h2>
+                    <h2>Edit Profile</h2>
                 </div>
                 <!-- / .Sign Up Card Title -->
             </div>
@@ -20,56 +20,43 @@
                         <!-- First Name Input -->
                         <div class="form-group">
                             <label for="fname">First Name:</label>
-                            <input type="text" class="input-field" name="fname" id="fname" required>
+                            <input type="text" class="input-field" name="fname" id="fname" value="{{ session['first_name'] }}" required>
                         </div>
                         <!-- Last Name Input -->
                         <div class="form-group">
                             <label for="lname">Last Name:</label>
-                            <input type="text" class="input-field" name="lname" id="lname" required>
+                            <input type="text" class="input-field" name="lname" id="lname" value="{{ session['last_name'] }}" required>
                         </div>
                         <!-- Email Input -->
                         <div class="form-group">
                             <label for="email">Email:</label>
-                            <input type="email" class="input-field" name="email" id="email" required>
-                        </div>
-                        <!-- Password Input -->
-                        <div class="form-group">
-                            <label for="pword">Password:</label>
-                            <input type="password" class="input-field" name="pword" id="pword" required>
-                        </div>
-                        <!-- Confirm Password Input -->
-                        <div class="form-group">
-                            <label for="confirm-pword">Confirm Password:</label>
-                            <input type="password" class="input-field" name="confirm-pword" id="confirm-pword" required>
+                            <input type="email" class="input-field" name="email" id="email" value="{{ session['user_email'] }}" required>
                         </div>
                         <!-- Phone Input -->
                         <div class="form-group">
                             <label for="phone">Phone Number:</label>
-                            <input type="text" class="input-field" name="phone" id="phone" required>
+                            <input type="text" class="input-field" name="phone" id="phone" value="{{ session['user_phone'] }}" required>
                         </div>
                         <!-- Address Input -->
                         <div class="form-group">
                             <label for="address">Address:</label>
-                            <input type="text" class="input-field" name="address" id="address" required>
+                            <input type="text" class="input-field" name="address" id="address" value="{{ session['user_address'] }}" required>
                         </div>
                         <!-- User Type Input -->
                         <div class="form-group">
                             <label for="user_type">User Type</label>
                             <select class="input-field select-field" id="user_type" name="user_type" required>
-                                <option value="" disabled selected>Select account type</option>
-                                <option value="Volunteer">Volunteer</option>
-                                <option value="Vulnerable">Vulnerable</option>
+                                <option value="{{ session['user_type'] }}">{{ session['user_type'] }}</option>
+                                {% if session['user_type'] == "Volunteer" %}
+                                    <option value="Vulnerable">Vulnerable</option>
+                                {% else %}
+                                    <option value="Volunteer">Volunteer</option>
+                                {% endif %}
+                                
                             </select>
                         </div>
-                        <!-- Age Confirmation Input -->
-                        <div class="form-check form-group">
-                            <input class="form-check-input checkbox-field" type="checkbox" name="age_confirmation" id="age_confirmation" value="True" required>
-                            <label class="form-check-label" for="age_confirmation">
-                                I confirm I am over the age of 18
-                            </label>
-                        </div>
                         <!-- Submit Button -->
-                        <input type="submit" class="submit-btn" value="Sign Up">
+                        <input type="submit" class="submit-btn" value="Update">
                     </form>
                 </div>
                 <!-- / .Sign Up Card Content -->
