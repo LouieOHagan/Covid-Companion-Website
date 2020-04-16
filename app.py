@@ -107,6 +107,27 @@ def edit_profile():
         return render_template("edit-profile.html",
                                title="Edit Profile",
                                user=user_info)
+    if request.method == "POST":
+        first_name = request.form["fname"]
+        last_name = request.form["lname"]
+        user_email = request.form["email"]
+        user_phone = request.form["phone"]
+        user_address = request.form["address"]
+        user_type = request.form["user_type"]
+
+        edit_user = {'first_name': first_name,
+                     'last_name': last_name,
+                     'user_email': user_email,
+                     'user_phone': user_phone,
+                     'user_address': user_address,
+                     'user_type': user_type,
+                     }
+
+        update_user = mongo.db.users
+        user_id = session['user_id']
+        update_user.update_one({"_id": ObjectId(user_id)},
+                               {'$set': edit_user})
+        return redirect(url_for('dashboard'))
 
 
 @app.route("/get-help", methods=["GET", "POST"])
