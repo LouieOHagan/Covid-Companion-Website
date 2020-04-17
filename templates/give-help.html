@@ -1,72 +1,84 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 
-{% block title %}{{ title }} | Covid Companion{% endblock %} 
+{% block title %}{{ title }} | Covid Companion{% endblock %}
 
 {% block content %}
 <div class="background-image give-help-background">
-    <div class="container">
-        {# Loops through the posts collection in DB and returns an accordion containing all the posts #}
-        {% for post in posts %}
-        <div class="accordion" id="accordionExample">
-            <div class="card">
-                <!-- Accordion Header -->
-                <div class="card-header" id="heading{{ loop.index }}" data-toggle="collapse" data-target="#collapse{{ loop.index }}" aria-expanded="false" aria-controls="collapse{{ loop.index }}">
-                    <div class="list-inline">
-                        <p class="mb-0 list-inline-item">{{ post.title}}</p>
-                        <p class="mb-0 list-inline-item">-- Status: {{ post.status}}</p>
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{ loop.index }}" aria-expanded="false" aria-controls="collapse{{ loop.index }}">
+	<div class="container">
+		{# Loops through the posts collection in DB and returns an accordion containing all the posts #}
+		<div class="accordion" id="accordionExample">
+			{% for post in posts %}
+
+			<div class="card">
+				<!-- Accordion Header -->
+				<div class="card-header" id="heading{{ loop.index }}" data-toggle="collapse"
+					data-target="#collapse{{ loop.index }}" aria-expanded="false"
+					aria-controls="collapse{{ loop.index }}">
+					<div class="list-inline">
+						<p class="mb-0 list-inline-item">{{ post.title}}</p>
+						<p class="mb-0 list-inline-item">-- Status: {{ post.status}}</p>
+						<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{ loop.index }}" aria-expanded="false" aria-controls="collapse{{ loop.index }}">
                             <i class="fas fa-chevron-circle-down"></i>
                         </button>
-                    </div>
-                    <p class="mb-0 small">Posted by: {{ post.name}}</p>
-                </div>
-                <!-- Accordion Body -->
-                <div id="collapse{{ loop.index }}" class="collapse" aria-labelledby="heading{{ loop.index }}" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <!-- Post Description -->
-                        <p class="mb-0">Description: {{ post.description}}</p>
-                        <!-- Order Number -->
-                        <p class="mb-0">Order Number: {{ post.order_number}}</p>
-                        <!-- County -->
-                        <p class="mb-0">County: {{ post.county}}</p>
-                        <!-- Delivery Address -->
-                        <p class="mb-0">Delivery Address: {{ post.address}}</p>
+					</div>
+					<p class="mb-0 small">Posted by: {{ post.name}}</p>
+				</div>
+				<!-- Accordion Body -->
+				<div id="collapse{{ loop.index }}" class="collapse" aria-labelledby="heading{{ loop.index }}"
+					data-parent="#accordionExample">
+					<div class="card-body">
+						<!-- Post Description -->
+						<p class="mb-0">Description: {{ post.description}}</p>
+						<!-- Order Number -->
+						<p class="mb-0">Order Number: {{ post.order_number}}</p>
+						<!-- County -->
+						<p class="mb-0">County: {{ post.county}}</p>
+						<!-- Delivery Address -->
+						<p class="mb-0">Delivery Address: {{ post.address}}</p>
 
-                        <h3>Contact Details:</h3>
-                        <!-- Email Address -->
-                        <p class="mb-0">Email: {{ post.email}}</p>
-                        <!-- Phone Number -->
-                        <p>Phone Number: {{ post.phone_number}}</p>
-                        {# If statement to check if logged in user is the user who created the post. If they are they have accesss to edit or delete the post #}
-                        {% if post.post_creator == session['user_id'] %}
-                            <h3>Post Actions:</h3>
-                            <!-- Edit Post Button -->
-                            <a href="{{url_for('edit_post', post_id=post._id)}}" class="btn btn-info">Edit Post</a>
-                            <!-- Delete Post Button -->
-                            <a href="{{url_for('remove_post_confirmation', post_id=post._id)}}" class="btn btn-danger">Delete Post</a>
-                        {% endif %}
+						<h3>Contact Details:</h3>
+						<!-- Email Address -->
+						<p class="mb-0">Email: {{ post.email}}</p>
+						<!-- Phone Number -->
+						<p>Phone Number: {{ post.phone_number}}</p>
+						{# If statement to check if logged in user is the user who created the post. If they are they have accesss to edit or delete the post #}
+						{% if post.post_creator == session['user_id'] %}
+						<h3>Post Actions:</h3>
+						<!-- Edit Post Button -->
+						<a href="{{url_for('edit_post', post_id=post._id)}}" class="btn btn-info">Edit Post</a>
+						<!-- Delete Post Button -->
+						<a href="{{url_for('remove_post_confirmation', post_id=post._id)}}"
+							class="btn btn-danger">Delete Post</a>
+						{% endif %}
 
-                        <h3>Change Post Status:</h3>
-                        <!-- Change Status Buttons -->
-                        {# If statements to check post status, disables one of the three buttons depending what current status is  #}
-                        {% if post.status == "Available" %}
-                            <a class="btn btn-success disabled" role="button" aria-disabled="true">Available</a>
-                            <a href="{{url_for('update_status', status='In Progress', post_id=post._id)}}" class="btn btn-warning">In Progress</a>
-                            <a href="{{url_for('update_status', status='Completed', post_id=post._id)}}" class="btn btn-primary">Completed</a>
-                        {% elif post.status == "In Progress" %}
-                            <a href="{{url_for('update_status', status='Available', post_id=post._id)}}" class="btn btn-success">Available</a>
-                            <a class="btn btn-warning disabled" role="button" aria-disabled="true">In Progress</a>
-                            <a href="{{url_for('update_status', status='Completed', post_id=post._id)}}" class="btn btn-primary">Completed</a>
-                        {% elif post.status == "Completed" %}
-                            <a href="{{url_for('update_status', status='Available', post_id=post._id)}}" class="btn btn-success">Available</a>
-                            <a href="{{url_for('update_status', status='In Progress', post_id=post._id)}}" class="btn btn-warning">In Progress</a>
-                            <a class="btn btn-primary disabled" role="button" aria-disabled="true">Completed</a>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
+						<h3>Change Post Status:</h3>
+						<!-- Change Status Buttons -->
+						{# If statements to check post status, disables one of the three buttons depending what current status is  #}
+						{% if post.status == "Available" %}
+						<a class="btn btn-success disabled" role="button" aria-disabled="true">Available</a>
+						<a href="{{url_for('update_status', status='In Progress', post_id=post._id)}}"
+							class="btn btn-warning">In Progress</a>
+						<a href="{{url_for('update_status', status='Completed', post_id=post._id)}}"
+							class="btn btn-primary">Completed</a>
+						{% elif post.status == "In Progress" %}
+						<a href="{{url_for('update_status', status='Available', post_id=post._id)}}"
+							class="btn btn-success">Available</a>
+						<a class="btn btn-warning disabled" role="button" aria-disabled="true">In Progress</a>
+						<a href="{{url_for('update_status', status='Completed', post_id=post._id)}}"
+							class="btn btn-primary">Completed</a>
+						{% elif post.status == "Completed" %}
+						<a href="{{url_for('update_status', status='Available', post_id=post._id)}}"
+							class="btn btn-success">Available</a>
+						<a href="{{url_for('update_status', status='In Progress', post_id=post._id)}}"
+							class="btn btn-warning">In Progress</a>
+						<a class="btn btn-primary disabled" role="button" aria-disabled="true">Completed</a>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+
+			{% endfor %}
+		</div>
+	</div>
 </div>
 {% endblock %}
