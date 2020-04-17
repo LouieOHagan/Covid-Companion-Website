@@ -1,2 +1,26 @@
-<h1>OOPS! 404 ERROR</h1>
-<h2>Page not found</h2>
+{% extends 'base.html' %}
+
+{% block title %}{{ title }} | Covid Companion{% endblock %}
+
+{% block content %}
+<div class="background-image access-denied-background">
+    <div class="container error-pic">
+
+    <!-- Landing Page Image -->
+    <div class="row">
+        <div class="col-12 hero-image hero-text">
+            <img src="{{ url_for('static', filename='images/404.png') }}" alt="404 Image" />
+        </div>
+    </div>
+    <!-- / .Landing Page Image -->
+    <h1>Uh Oh! Page Not Found</h1>
+    
+    <p class="mb-0">We looked everywhere but it seems this page just doesnt exist</p>
+    <p class="mb-0">Thats okay though, we are still here to make sure you get home safely!</p>
+    <a href="{{ url_for('home') }}" class="error-btn">Go Home</a>
+    <p class="email">Think this is a mistake ? Let us know at <a href="mailto:support@covid-companion.ie">support@covid-companion.ie</a></p>
+
+    </div>
+</div>
+    
+{% endblock %}

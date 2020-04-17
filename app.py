@@ -24,7 +24,7 @@ def check_logged_in(func):
         if 'logged-in' in session:
             return(func(*args, **kwargs))
         else:
-            return render_template('access-denied.html', title="Access Denied")
+            return render_template('403.html', title="Access Denied")
     return wrapped_function
 
 
@@ -290,12 +290,12 @@ def error404(error):
 
 @app.errorhandler(403)
 def error403(error):
-    return render_template("403.html"), 403
+    return render_template('403.html', title="Access Denied"), 403
 
 
 @app.errorhandler(500)
 def error500(error):
-    return render_template("500.html"), 500
+    return render_template("500.html", title="OOPS - Internal Server Error"), 500
 
 
 if __name__ == "__main__":

@@ -273,7 +273,7 @@ body {
     background: url(../images/back-8.jpg) center/cover no-repeat fixed;
 }
 
-/* --------------------------Access Denied Page */
+/* --------------------------Error Pages */
 
 .access-denied-background {
     background: #333333;
@@ -322,6 +322,20 @@ body {
     color: #f5f5f5;
     transform: scale(1.05);
     transition: transform .5s ease-in-out;
+}
+
+.email {
+    margin-top: 15px;
+}
+
+.email a {
+    text-decoration: none;
+    color: #f5f5f5;
+}
+
+.email a:hover {
+    text-decoration: underline;
+    color: #f5f5f5;
 }
 
 
