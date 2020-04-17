@@ -261,13 +261,16 @@ body {
 }
 
 .sign-up-background {
-    background: url(../images/back-6.jpg) center/cover no-repeat fixed;
+    background: url(../images/back-7.jpg) center/cover no-repeat fixed;
 }
 
 .dashboard-background {
-    /* background: url(../images/back-6.jpg) center/cover no-repeat fixed; */
-    background: rgb(37, 37, 37);
+    background: url(../images/back-6.jpg) center/cover no-repeat fixed;
 }   
+
+.edit-profile-background {
+    background: url(../images/back-8.jpg) center/cover no-repeat fixed;
+}
 
 /* --------------------------Page Cards */
 
@@ -309,6 +312,25 @@ body {
     padding: 0;
 }
 
+.welcome-message {
+    width: 22rem;
+    text-align: center;
+    margin: 3.125rem auto 20px auto;
+    text-decoration: none;
+    transition: transform .5s ease-in-out;
+    background: #3c3c3c;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    border: 1px solid #909090;
+}
+
+.welcome-text {
+    color: #feb62e;
+    font-size: 2rem;
+    padding: 7px;
+    margin-bottom: 0;
+}
+
 .dash-card-li {
     display: inline-block;
     text-decoration: none;
@@ -344,10 +366,6 @@ body {
     font-size: 75px;
     color: #feb62e;
     padding-bottom: 25px;
-}
-
-.welcome {
-    color: #f5f5f5;
 }
 
 /* --------------------------Remove Post Confirmation Page */
@@ -591,10 +609,20 @@ body {
     }
 
     /* --- Dashboard */
+    .welcome-message {
+        width: 20rem;
+        margin: 1.125rem auto 20px auto;
+    }
+
+    .welcome-text {
+        font-size: 26px;
+        padding: 9px;
+    }
+
     .general-card {
         width: 20rem;
         height: 21rem;
-        margin: 2.125rem auto 20px auto;
+        margin: 1.125rem auto 20px auto;
     }
 
     .general-card h5 {
@@ -689,10 +717,18 @@ body {
     }
 
     /* --- Dashboard */
+    .welcome-message {
+        width: 17rem;
+    }
+
+    .welcome-text {
+        font-size: 23px;
+    }
+
     .general-card {
         width: 17rem;
         height: 17rem;
-        margin: 2rem auto 20px auto;
+        margin: 0.5rem auto 15px auto;
     }
 
     .general-card h5 {
@@ -778,10 +814,19 @@ body {
     }
 
     /* --- Dashboard */
+    .welcome-message {
+        width: 12rem;
+        margin: 1.125rem auto 20px auto;
+    }
+
+    .welcome-text {
+        font-size: 22px;
+    }
+
     .general-card {
         width: 12rem;
         height: 12rem;
-        margin: 2rem auto 20px auto;
+        margin: 0.5rem auto 20px auto;
     }
 
     .general-card h5 {

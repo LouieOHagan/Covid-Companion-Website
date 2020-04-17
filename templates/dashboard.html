@@ -5,9 +5,15 @@
 {% block content %}
 <div class="background-image dashboard-background">
     <div class="container">
-    
+
         <!-- Welcome Message -->
-        <h1 class="welcome">Welcome {{ user.first_name }},</h1>
+        <div class="row">    
+            <div class="col-12">
+            <div class="welcome-message">
+                <h1 class="welcome-text">Welcome {{ user.first_name }},</h1>
+            </div>
+            </div>
+        </div>
         <!-- / .Welcome Message -->
 
         <!-- Dashboard Redirect Cards -->
@@ -32,12 +38,6 @@
             {% endif %}
         </ul>
         <!-- / .Dashboard Redirect Cards -->
-
-        <!-- Help Section with Instructions -->
-        <h2 class="welcome">Help Section: Instructions</h2>
-        <p class="welcome">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque voluptates fugit eveniet, ipsam vitae dolores
-            officiis expedita! Quae, repudiandae aspernatur.</p>
-        <!-- / .Help Section with Instructions -->
 
     </div>
 </div>
