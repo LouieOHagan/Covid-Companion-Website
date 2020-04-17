@@ -264,6 +264,11 @@ body {
     background: url(../images/back-6.jpg) center/cover no-repeat fixed;
 }
 
+.dashboard-background {
+    /* background: url(../images/back-6.jpg) center/cover no-repeat fixed; */
+    background: rgb(37, 37, 37);
+}   
+
 /* --------------------------Page Cards */
 
 .form-card {
@@ -298,6 +303,10 @@ body {
 
 .dashboard-card-sect {
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0;
 }
 
 .dash-card-li {
@@ -311,13 +320,12 @@ body {
     height: 20rem;
     text-align: center;
     margin: 3.125rem auto 20px auto;
-    border: 1px solid rgba(133, 133, 133, 0.329);
-    border-top: 2px solid #909090;
-    box-shadow: 1.5px 1.5px 4px 1px rgba(133, 133, 133, 0.486);
-    background: #3c3c3c;
-    border-radius: 4px;
     text-decoration: none;
     transition: transform .5s ease-in-out;
+    background: #3c3c3c;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    border: 1px solid #909090;
 }
 
 .general-card:hover {
@@ -329,13 +337,17 @@ body {
 .general-card h5 {
     color: #f5f5f5;
     font-size: 35px;
-    padding: 5rem 0px;
+    padding: 5.5rem 0px;
 }
 
 .card-icon {
     font-size: 75px;
     color: #feb62e;
     padding-bottom: 25px;
+}
+
+.welcome {
+    color: #f5f5f5;
 }
 
 /* --------------------------Remove Post Confirmation Page */
@@ -490,6 +502,10 @@ body {
 
 /* Active for screen sizes under 992px */
 @media (max-width: 992px) {
+    /* --- Dashboard */
+    .dash-card-li {
+        margin: 0 15px;
+    }
 
     /* --- Navbar */
     .cc-navbar {
@@ -508,6 +524,16 @@ body {
 
 /* Active for screen sizes under 768px */
 @media (max-width: 768px) {
+
+    /* --- Dashboard */
+    .general-card {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .general-card h5 {
+        padding: 3.5rem 0;
+    }
 
     /* --- Flash Messages */
     .flash-message {
@@ -562,6 +588,27 @@ body {
 
     .flash-message .close-btn {
         padding: 0.525rem 1.25rem;
+    }
+
+    /* --- Dashboard */
+    .general-card {
+        width: 20rem;
+        height: 21rem;
+        margin: 2.125rem auto 20px auto;
+    }
+
+    .general-card h5 {
+        padding: 5.4rem 0;
+        font-size: 40px;
+    }
+
+    .card-icon {
+        font-size: 90px;
+    }
+
+    .dashboard-card-sect {
+        flex-direction: column;
+        align-items: center;
     }
 
     /* --- Footer */
@@ -641,6 +688,22 @@ body {
         padding: 0.22rem 1.25rem;
     }
 
+    /* --- Dashboard */
+    .general-card {
+        width: 17rem;
+        height: 17rem;
+        margin: 2rem auto 20px auto;
+    }
+
+    .general-card h5 {
+        padding: 3.9rem 0;
+        font-size: 35px;
+    }
+
+    .card-icon {
+        font-size: 80px;
+    }
+
     /* --- Small Device Navbar */
     .phone-nav ul {
         height: 70px;
@@ -712,6 +775,23 @@ body {
     /* --- Flash Messages */
     .flash-message {
         font-size: 12px;
+    }
+
+    /* --- Dashboard */
+    .general-card {
+        width: 12rem;
+        height: 12rem;
+        margin: 2rem auto 20px auto;
+    }
+
+    .general-card h5 {
+        padding: 2.5rem 0;
+        font-size: 30px;
+    }
+
+    .card-icon {
+        font-size: 55px;
+        padding-bottom: 20px;
     }
 
     /* --- Footer */

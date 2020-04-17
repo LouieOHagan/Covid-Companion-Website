@@ -24,11 +24,11 @@ Project preview/showcase
 	- If it works then style accordion properly
 	- look in to fix where one accordion is open all others close
 	- Add mailto: & tel: around contact info
-- Form validation
-	- checking if email exists already on register
-	- check that passwords match on register
-	- check if email exists on login aswell as password
-    - Setup Flash error responses
+- ~~Form validation~~ - **Implemented 15/04/20**
+	- ~~checking if email exists already on register~~
+	- ~~check that passwords match on register~~
+	- ~~check if email exists on login aswell as password~~
+    - ~~Setup Flash error responses~~
 - ~~Add autofill values on forms from session information~~ - **Implemented 15/04/20**
 - Get content and styling for 404 pages, 500 pages, access denied pages and not your post pages
 - Hero image for home page
