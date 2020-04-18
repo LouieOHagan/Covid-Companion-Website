@@ -514,6 +514,10 @@ body {
 
 /* --------------------------Give Help Page */
 
+.post-display {
+    margin-bottom: 50px;
+}
+
 .accordion-unopened {
     background: #3c3c3c;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
@@ -529,17 +533,33 @@ body {
     position: absolute;
     right: 20px;
     font-size: 20px;
-    color: #f5f5f5;
+    color: #feb62e;
 }
 
 .post-title {
     color: #feb62e;
-    margin-bottom: 0;
+    margin-bottom: 5px;
     font-size: 18px;
 }
 
 .sect-name {
     color: #feb62e;
+}
+
+.post-info {
+    margin-bottom: 15px;
+}
+
+.post-info a {
+    color: #f5f5f5;
+    text-decoration: underline;
+}
+
+.post-heading {
+    color: #feb62e;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    font-size: 23px;
 }
 
 /* --------------------------Get Help Page */
