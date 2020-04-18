@@ -298,6 +298,7 @@ body {
 .error-pic p {
     text-align: center;
     color: #feb62e;
+    margin-bottom: 0;
 }
 
 .error-btn {
@@ -798,6 +799,29 @@ body {
     .login-card h2 {
         font-size: 30px;
     }
+
+    /* --- Error Pages */
+    .hero-text{
+    line-height: 35vh;
+    text-align: center;
+    }
+
+    .hero-text img{
+        height: 10rem;
+    }
+
+    .error-pic h1 {
+        font-size: 45px;
+        margin-top: -10px;
+    }
+
+    .error-pic p {
+        margin-bottom: 15px;
+    }
+
+    .email {
+        margin-bottom: 10px;
+    }
 }
 
 /* Active for screen sizes under 350px */
@@ -899,6 +923,32 @@ body {
 
     .login-card h2 {
         font-size: 23px;
+    }
+
+    /* --- Error Pages */
+    .hero-text{
+    line-height: 25vh;
+    text-align: center;
+    }
+
+    .hero-text img{
+        height: 7rem;
+    }
+
+    .error-pic h1 {
+        font-size: 40px;
+        margin-top: -5px;
+    }
+
+    .error-pic p {
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+
+    .error-btn {
+        padding: 5px 0;
+        width: 10rem;
+        font-size: 20px;
     }
 }
 
@@ -1002,6 +1052,33 @@ body {
     /* --- Get Help Page */
     .login-card {
         margin: 20px auto 0;
+    }
+
+    /* --- Error Pages */
+    .hero-text{
+    line-height: 30vh;
+    text-align: center;
+    }
+
+    .hero-text img{
+        height: 6rem;
+    }
+
+    .error-pic h1 {
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .error-btn {
+        margin-bottom: 20px;
+    }
+
+    .error-pic p {
+        margin-bottom: 15px;
+    }
+
+    .email {
+        margin-bottom: 10px;
     }
 }
 
