@@ -614,13 +614,12 @@ body {
 }
 
 .form-group label {
-    display: block;
     margin-bottom: 0px;
     color: #feb62e;
     font-weight: 100;
     border-bottom: 1px solid #feb62e;
     padding-right: 5px;
-    width: fit-content;
+    display: table;
 }
 
 .form-check label {
