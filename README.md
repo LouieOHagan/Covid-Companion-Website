@@ -77,7 +77,46 @@ Project preview/showcase
 
 ### Languages Used
 
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [Python](https://www.python.org/)
+
 ### Frameworks, Libraries & Programs Used
+1. [Flask:](https://flask.palletsprojects.com/en/1.1.x/)
+    - Flask was the primary framework used to handle all routes and provide all tools, libraries, and technologies required for the project.
+1. [Flask-PyMongo:](https://flask-pymongo.readthedocs.io/en/latest/)
+    - Flask-PyMongo was used to bridge Flask and PyMongo & to allow me to work with MongoDB from Python.
+1. [PassLib:](https://passlib.readthedocs.io/en/stable/)
+    - PassLib was used to hash passwords prior to entering the data in to the Database.
+1. [MongoDB Atlas:](https://www.mongodb.com/cloud/atlas)
+    - MongoDB Atlas was the cloud (non-relational) databse used to store all data being created on the website such as users and posts.
+1. [Heroku:](https://www.heroku.com/home)
+    - Heroku was used deploy the website.
+1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/) 
+    - Bootstrap was used primarily for the grid system however the Bootstrap accordion & bootstrap classes for styling were also used throughout the project.
+1. [Google Fonts:](https://fonts.google.com/)
+    - Google fonts were used to import the 'Titillium Web' font into the style.css file which is used on all pages throughout the project.
+1. [Font Awesome:](https://fontawesome.com/)
+    - Font Awesome was used to add icons throughout the project for aesthetic and UX purposes.
+1. [jQuery:](https://jquery.com/)
+    - jQuery was used by Bootstrap specifically for the functionality of the accordion on the Give Help page.
+1. [Git](https://git-scm.com/)
+    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+1. [Gitpod:](https://www.gitpod.io/)
+    - Gitpod was the primary IDE used throughout the entirety of the project. 
+1. [GitHub:](https://github.com/)
+    - GitHub is used to store the project code after being pushed from Git.
+    - The GitHub repository is also linked to Heroku which is automatically deployed when a new commit is pushed.
+1. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
+    - Photoshop was used to create the logo, the image used in the footer, images in the README and to edit background photos to maintain consistency in style (Black and white image with a 9px gaussian blur filter)  
+1. [Balsamiq:](https://balsamiq.com/)
+    - Balsamiq was used to create the [wireframes](https://github.com/LouieOHagan/Covid-Companion-Website#wireframes) during the design process. 
+1. [Screen to GIF](https://www.screentogif.com/)
+    - Screen to GIF was used to record the screen to create GIF's to demonstrate a specific task in video for the README.md file.
+1. [HTML Formatter](https://htmlformatter.com/)
+    - HTML Formatter was used to beautify code to keep the code neat and easy to read. It was utilised as Beautify Cmd (Shift + Alt + F) in GitPod distorted the code in GitHub.
+
 
 ## Testing
 
