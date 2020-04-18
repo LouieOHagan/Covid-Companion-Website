@@ -562,6 +562,20 @@ body {
     font-size: 23px;
 }
 
+.status-button {
+    display: flex;
+    flex-direction: row;
+}
+
+.action-btn {
+    display: inline-block;
+    padding: 7px 10px;
+    margin: 5px 10px 15px;
+    border-radius: 6px;
+    width: 125px;
+}
+
+
 /* --------------------------Get Help Page */
 
 .form-section {
@@ -781,6 +795,17 @@ body {
 
     .disclaimer {
         font-size: 15px;
+    }
+
+    /* --- Give Help Page */
+    .status-button {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .post-heading {
+        margin: 10px 0;
+        text-align: center;
     }
 
     /* --- Get Help Page */
