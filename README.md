@@ -131,9 +131,31 @@ Project preview/showcase
 ## Credits
 
 ### Code
+- [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make the site responsive using the Bootstrap Grid System, as well as utilizing Bootstraps accordion component and various bootstrap classes for styling.
+- [Martin Wolf](https://www.youtube.com/watch?v=t9nQDdrPgZ0): for tutorial on how to animate the border-bottom of a link on hover that I used in the navbar of my project.
+- [Florin Pop](https://codepen.io/FlorinPop17): for original inspiration and pieces of code for bottom mobile navigation bar. Both HTML & CSS modified and some parts rewritten to better fit use.
+- Kevin Loughrey for help setting up basic account system & for check_logged_in wrapper function on line 21-28 of app.py
+```
+def check_logged_in(func):
+    @wraps(func)
+    def wrapped_function(*args, **kwargs):
+        if 'logged-in' in session:
+            return(func(*args, **kwargs))
+        else:
+            return render_template('403.html', title="Access Denied")
+    return wrapped_function
+```
 
 ### Content
 
 ### Media
+- [Pixabay](https://pixabay.com/): All stock background images of Dublin were obtained from Pixabay.
 
 ### Acknowledgements
+- My Mentor Adegbenga Adeye for continuous helpful feedback and ideas to improve both myself as a developer and my project.
+
+- Kevin Loughrey and Xavier Astor for continuous assistance with technical issues and project feedback day in, day out 
+
+- [Matt Rudge](https://github.com/lechien73): for project idea inspiration and continuous assistance with technical issues and project feedback.
+
+- [sentdex](https://pythonprogramming.net/flash-flask-tutorial/): for information and a video tutorial on Flasks Flash function.
