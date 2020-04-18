@@ -1,5 +1,28 @@
-Oh hey there, it would seem that you have discovered how we have our system setup with editing and deleting posts.
-A+ for Effort, we hate to ruin the party however what you're trying to do is not allowed as you are not the user
-who created this post so stop trying to modify it. 
-Lucky for you, we are still nice people so here is a button to take you home
-<a href="{{url_for('give_help')}}">Take me Home</a>
+{% extends 'base.html' %}
+
+{% block title %}{{ title }} | Covid Companion{% endblock %}
+
+{% block content %}
+<div class="background-image access-denied-background">
+    <div class="container error-pic">
+
+        <!-- Landing Page Image -->
+        <div class="row">
+            <div class="col-12 hero-image hero-text">
+                <img src="{{ url_for('static', filename='images/403.png') }}" alt="403 Image" />
+            </div>
+        </div>
+        <!-- / .Landing Page Image -->
+        <div class="row">
+            <div class="col-12">
+                <h1>Access Denied!</h1>
+                
+                <p>We hate to ruin the party however this isnt your post so stop trying to modify it.</p>
+                <p>Lucky for you, we are still nice people so here is a button to take you home</p>
+                <a href="{{ url_for('home') }}" class="error-btn">Go Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+    
+{% endblock %}

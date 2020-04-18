@@ -202,7 +202,7 @@ def edit_post(post_id):
                                    post=post_info,
                                    counties=counties)
         else:
-            return render_template('not-your-post.html')
+            return render_template('not-your-post.html', title="Access Denied")
 
     if request.method == "POST":
         title = request.form["title"]
@@ -261,7 +261,7 @@ def remove_post_confirmation(post_id):
                                title="Remove Post Confirmation",
                                post=post_name)
     else:
-        return render_template('not-your-post.html')
+        return render_template('not-your-post.html', title="Access Denied")
 
 
 @app.route("/remove-post/<post_id>")
@@ -272,7 +272,7 @@ def remove_post(post_id):
         mongo.db.posts.delete_one({"_id": ObjectId(post_id)})
         return redirect(url_for('give_help'))
     else:
-        return render_template('not-your-post.html')
+        return render_template('not-your-post.html', title="Access Denied")
 
 
 @app.route("/give-help")
@@ -295,10 +295,10 @@ def error403(error):
 
 @app.errorhandler(500)
 def error500(error):
-    return render_template("500.html", title="OOPS - Internal Server Error"), 500
+    return render_template("500.html", title="Internal Server Error"), 500
 
 
 if __name__ == "__main__":
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
-            debug=True)
+            debug=False)
