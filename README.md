@@ -21,11 +21,10 @@ Project preview/showcase
 ## User Experience (UX)
 
 - ### User stories
-    - #### First time user 
-        1. As a first time user, I want to be greeted with an appealing website that makes finding important information about the organisation a seamless task.
-        2. As a first time user, I want to be greeted with an easily navigable website which would require a simple and clean navigation bar.
-        3. As a first time user, I want to be given feedback on any mistakes/actions I make such as an error message.
-        4. As a first time user, I want to be able to create an account so that I can explore the options I have as a registered user. 
+    - #### First Time User 
+        1. As a First Time User, I want to be greeted with an easily navigable website which would require a simple and clean navigation bar.
+        2. As a First Time User, I want to be given feedback on any mistakes/actions I make such as an error message.
+        3. As a First Time User, I want to be able to create an account so that I can explore the options I have as a registered user. 
     - #### Vulnerable person 
         1. As a Vulnerable person, I want to be able to create a post to describe in detail what I am in need of.
         2. As a Vulnerable person, I want to be able to see the post I created to make sure it posted and to ensure that all the information is correct.
