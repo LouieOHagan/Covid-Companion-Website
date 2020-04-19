@@ -27,12 +27,17 @@ def check_logged_in(func):
             return render_template('403.html', title="Access Denied")
     return wrapped_function
 
-
+# Home Page route that renders index.html template and passes in title as a variable
 @app.route("/")
 def home():
     return render_template("index.html", title="Home")
 
 
+"""
+Sign Up Route which allows for both GET & POST request methods
+If it a GET method request, it checks if the user is logged in, if logged in
+they are directed to the dashboard page, otherwise they go to the sign up page 
+"""
 @app.route("/sign-up", methods=["GET", "POST"])
 def sign_up():
     if request.method == "GET":
@@ -44,6 +49,9 @@ def sign_up():
         user_email = request.form["email"]
         email_check = mongo.db.users.find_one({'user_email': user_email})
 
+        """ Checks if there is an account already registered with the provided email
+         If there isnt, the process comtinues to ensure the two passowrds match before creating the user
+         If they match the passwords are hashed and inserted in to the database """
         if email_check is None:
             password = request.form["pword"]
             confirm_password = request.form["confirm_pword"]
@@ -76,7 +84,11 @@ def sign_up():
             flash("Email Address already in use")
             return redirect(url_for('sign_up'))
 
-
+"""
+Login Route which allows for both GET & POST request methods
+If it a GET method request, it checks if the user is logged in, if logged in
+they are directed to the dashboard page, otherwise they go to the login page 
+"""
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "GET":
@@ -87,7 +99,9 @@ def login():
     if request.method == "POST":
         form_email = request.form["email"]
         user_check = mongo.db.users.find_one({'user_email': form_email})
-
+        
+        """ Checks if there is an account already registered with the provided email
+         If there is, the process comtinues to ensure the passowrds match before logging the user in """
         if user_check is None:
             flash("Email Address not found")
             return redirect(url_for('login'))
@@ -103,6 +117,7 @@ def login():
                 return redirect(url_for('login'))
 
 
+# Logout Route clears the session and logs the user out, redirecting them to the login page
 @app.route("/logout")
 @check_logged_in
 def logout():

@@ -165,6 +165,7 @@ number that they were given from the shop when they completed their click and co
 - Features in the "If have time" section of the To Do list.
 - Remake home page with cleaner look and more content.
 - Add more content to the Features section of README.md file.
+- Add more commenting to the app.py file and ensure it is clear and easy to read for future reference.
 
 ## Database Schema
 - The Database is made up of 3 collections in total, `counties`, `posts` & `users`
