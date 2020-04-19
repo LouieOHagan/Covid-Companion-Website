@@ -21,10 +21,46 @@ Project preview/showcase
 ## User Experience (UX)
 
 - ### User stories
+    - #### First time user 
+        1. As a first time user, I want to be greeted with an appealing website that makes finding important information about the organisation a seamless task.
+        2. As a first time user, I want to be greeted with an easily navigable website which would require a simple and clean navigation bar.
+        3. As a first time user, I want to be given feedback on any mistakes/actions I make such as an error message.
+        4. As a first time user, I want to be able to create an account so that I can explore the options I have as a registered user. 
+    - #### Vulnerable person 
+        1. As a Vulnerable person, I want to be able to create a post to describe in detail what I am in need of.
+        2. As a Vulnerable person, I want to be able to see the post I created to make sure it posted and to ensure that all the information is correct.
+        3. As a Vulnerable person, I want to be able to edit a post that I created but accidentally made some typos on.
+        4. As a Vulnerable person, I want to be able to delete a post after a volunteer has kindly done my shopping for me.
+    - #### Volunteer 
+        1. As a Volunteer, I want to be able to view posts that vulnerable people have created so that I can do my part by helping the people in need in my community.
+        2. As a Volunteer, I want to be able to get in contact with the creator of the post to double check they don't need anything else while I'm out.
+        3. As a Volunteer, I want to be able to communicate to the post creator and other volunteers that I am going to do the shop to ensure more than 1 person isn't getting things for the one person at the same time.
+    - #### Returning user
+        1. As a Returning user, I want to be able to edit the information on my profile in case I inputted something wrong during registration.
+        2. As a Returning user, I want to be able to logout of my account for privacy and safety reasons.
 
 - ### Design
 
 * ### Wireframes
+    * Home Page Wireframe - [View]()   
+
+    * Give Help Page Wireframe - [View]()
+
+    * Get Help Page Wireframe - [View]()
+
+    * Login Page Wireframe - [View]()
+
+    * Sign Up Help Page Wireframe - [View]()
+
+    * User Dashboard Help Page Wireframe - [View]()
+
+    * Edit Post Page Wireframe - [View]()
+
+    * Edit Profile Page Wireframe - [View]()
+
+    * Error Pages Wireframe - [View]()
+
+    * Click [Here]() for Document containing all Wireframes in .pdf format.
     
 ## Features
 
@@ -167,7 +203,7 @@ they are the same, the password is then hashed and inserted once.
 
 ## Testing
 
-**Note:** All Testing Information can be located in seperate [TESTING.MD File]() due to length of content.
+**Note:** All Testing Information can be located in seperate [TESTING.MD File](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/TESTING.md) due to length of content.
 
 ## Deployment
 

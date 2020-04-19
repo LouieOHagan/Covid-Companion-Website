@@ -1,6 +1,6 @@
 <h1 align="center">Covid Companion Website - Testing Section</h1>
 
-<h2 align="center"><a href="https://github.com/LouieOHagan/Covid-Companion-Website#user-experience-ux"><img src="https://i.ibb.co/Qm1yCFH/learn-more-button.png"></a><img src="https://i.ibb.co/r3pzZnS/logo.png"><a href="https://covid-companion.herokuapp.com/"><img src="https://i.ibb.co/cgF4snj/live-website-button.png"></a></h2>
+<h2 align="center"><a href="https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/README.md"><img src="https://i.ibb.co/Qm1yCFH/learn-more-button.png"></a><img src="https://i.ibb.co/r3pzZnS/logo.png"><a href="https://covid-companion.herokuapp.com/"><img src="https://i.ibb.co/cgF4snj/live-website-button.png"></a></h2>
 
 ##### Note: TESTING.MD is a connected to [README.md](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/README.md) but a seperate file has been created to keep README and reasonable length and to maintain cleanliness
 
