@@ -21,60 +21,60 @@
     3. As a first time user, I want to be able to create an account so that I can explore the options I have as a registered user.
         1. Upon successful loading of the website the user is greeted with the landing page.
         2. At the top of the screen the user can easily identify the navigation bar. To the far left a big yellow button grabs the users attention which takes them to the page to sign up.
-        3. Pictures can be found [Here]()
+        3. Pictures can be found [Here](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/user-stories/sign-up.PNG)
 
 - #### Vulnerable person Goals
     1. As a Vulnerable person, I want to be able to create a post to describe in detail what I am in need of.
         1. After logging in, from the dashboard the user can click the 'Get Help' button on their dashboard or in the navigation bar.
         2. The user is then directed to a page where half the form is automatically filled out with information from their account and they can fill out the remaining fields and adjust the autofilled ones if needed.
-        3. Demonstration GIF can be found [Here]()
+        3. Demonstration GIF can be found [Here](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/user-stories/create%20post.gif)
     2. As a Vulnerable person, I want to be able to see the post I created to make sure it posted and to ensure that all the information is correct.
         1. After logging in, from the dashboard the user can click the 'Give Help' link in the navigation bar.
         2. Here they can see all posts that have been created which is where they will locate their post. 
         3. The user can open the post by clicking the card header and/or the button on the left handside of the card to view the information of their post.
-        4. Demonstration GIF can be found [Here]()
+        4. Demonstration GIF can be found [Here](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/user-stories/read-post.gif)
     3. As a Vulnerable person, I want to be able to edit a post that I created but accidentally made some typos on.
         1. After logging in, from the dashboard the user can click the 'Give Help' link in the navigation bar.
         2. Here they can see all posts that have been created which is where they will locate their post. 
         3. The user can open the post by clicking the card header and/or the button on the left handside of the card to view the information of their post.
         4. If the user is the person who created the post, 2 buttons will be visible, "Edit" and "Delete".
         5. The user can click the edit button, make their changes and then click the "Update" button to update their post.
-        6. Demonstration GIF can be found [Here]()
+        6. Demonstration GIF can be found [Here](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/user-stories/edit-post2.gif)
     4. As a Vulnerable person, I want to be able to delete a post after a volunteer has kindly done my shopping for me.
         1. After logging in, from the dashboard the user can click the 'Give Help' link in the navigation bar.
         2. Here they can see all posts that have been created which is where they will locate their post. 
         3. The user can open the post by clicking the card header and/or the button on the left handside of the card to view the information of their post.
         4. If the user is the person who created the post, 2 buttons will be visible, "Edit" and "Delete".
         5. The user can click the delete button and will be directed to a confirmation page to make sure they want to delete the post in case they clicked it by accident.
-        6. Demonstration GIF can be found [Here]()
+        6. Demonstration GIF can be found [Here](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/user-stories/delete-post.gif)
 
 - #### Vulnerable person Goals
     1. As a Volunteer, I want to be able to view posts that vulnerable people have created so that I can do my part by helping the people in need in my community.
         1. After logging in, from the dashboard the user can click the 'Give Help' link in the navigation bar.
         2. Here they can see all posts that have been created.
-        3. Demonstration GIF can be found [Here]()
+        3. Demonstration GIF can be found [Here](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/user-stories/volunteer-read-post.gif)
     2. As a Volunteer, I want to be able to get in contact with the creator of the post to double check they don't need anything else while I'm out.
         1. After logging in, from the dashboard the user can click the 'Give Help' link in the navigation bar.
         2. Here they can see all posts that have been created.
         3. The user can open the post by clicking the card header and/or the button on the left handside of the card to view the information of the post which is where they will find the contact information.
-        4. Demonstration GIF can be found [Here]()
+        4. Demonstration GIF can be found [Here](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/user-stories/volunteer-contact.gif)
     3. As a Volunteer, I want to be able to communicate to the post creator and other volunteers that I am going to do the shop to ensure more than 1 person isn't getting things for the one person at the same time.
         1. After logging in, from the dashboard the user can click the 'Give Help' link in the navigation bar.
         2. Here they can see all posts that have been created.
         3. The user can open the post by clicking the card header and/or the button on the left handside of the card to view the information of the post.
         4. The user will be able to see 3 buttons, "Available", "In Progress" & "Complete", one of these buttons will be disabled depending on what the status of the post is which can also be found in the post header.
         5. The user can click the button of the status they would like to change the post to.
-        6. Demonstration GIF can be found [Here]()
+        6. Demonstration GIF can be found [Here](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/user-stories/volunteer-status.gif)
 
 - #### Vulnerable person Goals
     1. As a Returning user, I want to be able to edit the information on my profile in case I inputted something wrong during registration.
         1. After logging in, from the dashboard the user can click the 'Edit Profile' button.
         2. The user will directed to the form where they can make adjustments to their profile information and can save it by clicking "Update"
-        3. Demonstration GIF can be found [Here]()
+        3. Demonstration GIF can be found [Here](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/user-stories/edit-profile.gif)
     2. As a Returning user, I want to be able to logout of my account for privacy and safety reasons.
         1. After logging in, from the dashboard the user can click the 'Logout' link in the navigation bar.
         2. This will log the user out of their account and they will be redirected to the login page.
-        3. Demonstration GIF can be found [Here]()
+        3. Demonstration GIF can be found [Here](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/user-stories/logout.gif)
 
 ### Further Testing
 - The website was tested across a wide range of devices and browsers to ensure its fully responsive and compatible for all users.

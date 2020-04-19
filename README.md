@@ -116,14 +116,12 @@ Project preview/showcase
 - ~~Fix border radius bug that appears on iphones with all input field border radius visible.~~ - **Implemented 15/04/20**
 - Add more commenting on all code
 	- Specifically the app.py file
-
-#### PRIORITY
-- Auto login when user creates account rather than redirecting to login page
-- Add create account button on login form
-- Fix bug on Edge & explorer with label width stretching across whole screen.
-- For email in footer, instead of doing basic herf, toggle modal that gives option to copy email to clipboard OR mailto:
+- ~~Fix bug on Edge & explorer with label width stretching across whole screen.~~ - **Implemented 18/04/20**
 
 #### IF HAVE TIME
+- Auto login when user creates account rather than redirecting to login page
+- Add create account button on login form
+- For email in footer, instead of doing basic herf, toggle modal that gives option to copy email to clipboard OR mailto:
 - Redo navbar with active class method from stackoverflow - use Refact in git commit
 - Rewrite JS for hiding and showing order number with jQuery to fade in and out.
 - Helpers pulsing, add with display absolute or relative and only show on larger screen devices.
@@ -132,10 +130,22 @@ Project preview/showcase
 - Create update password page where they need to put in old password, new password and confirm new password.
 - Setup so that all information doesnt dissapear if login or signup is unnsuccessful, only passwords dissappear.
 
-###### Last Updated: 14:02pm GMT - 18/04/20 
+###### Last Updated: 06:34am GMT - 19/04/20 
 
 ### Features Left to Implement
 ##### These are features that have not been added at the time of development due to various reasons such as time limitations.
+
+- Login with google, facebook, twitter etc
+- Verification system for volunteers so volunteers are all verified and not people that could possibly rob money, foods, medicines etc.
+- Archive posts that are complete so thats posts arent deleted but also so they arent clogging up the main posts section waiting for the creator to delete it.
+- Two Factor Authentication by sending email to user to confirm and then user is redirected to login page when they sign up until they confirm their email.
+- Pagination on Give Help page
+- Limit amount of characters users can input in to any text field input
+	- For security reasons so millions of characters cant be pasted in
+	- Also to be able to better plan for the responsiveness of displaying data 
+		- Right now posts can be as long or short as possible so not much can be done when it comes to the responsive side other than make sure everything is well spaced apart
+- Get rid of accordion and make another template page so users can just click in to a page and have the data presented neatly 
+- Features in the "If have time" section of the To Do list.
 
 ## Database Schema
 - The Database is made up of 3 collections in total, `counties`, `posts` & `users`
