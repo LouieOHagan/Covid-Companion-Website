@@ -301,19 +301,21 @@ body {
     background-size: cover;
 }
 
+.home-hero-image {
+    line-height: 60vh;
+    text-align: center;
+}
+
+.home-hero-image img{
+    height: 15rem;
+}
+
 .section-header{
     text-align: center;
     font-size: 35px;
     letter-spacing: 2px;
     color: #feb62e;
     font-weight: 300;
-}
-
-.icon-blue {
-    font-size: 75px;
-    color: #00a8ec;
-    padding-bottom: 15px;
-    padding-top: 0.625rem;
 }
 
 .home-section  {
@@ -706,6 +708,11 @@ body {
 
 /* Active for screen sizes under 992px */
 @media (max-width: 992px) {
+    /* --- Home Page */
+    .home-hero-image img{
+        height: 12rem;
+    }
+
     /* --- Dashboard */
     .dash-card-li {
         margin: 0 15px;
@@ -728,6 +735,18 @@ body {
 
 /* Active for screen sizes under 768px */
 @media (max-width: 768px) {
+    /* --- Home Page */
+    .home-image {
+        height: 50vh;
+    }
+
+    .home-hero-image {
+        line-height: 50vh;
+    }
+
+    .home-hero-image img{
+        height: 9rem;
+    }
 
     /* --- Dashboard */
     .general-card {
@@ -783,6 +802,26 @@ body {
 
 /* Active for screen sizes under 576px */
 @media (max-width:576px) {
+    /* --- Home Page */
+    .home-image {
+        height: 35vh;
+    }
+
+    .home-hero-image {
+        line-height: 35vh;
+    }
+
+    .home-hero-image img{
+        height: 5rem;
+    }
+
+    .section-header {
+        font-size: 30px;
+    }
+
+    .home-section p {
+        font-size: 16px;
+    }
 
     /* --- Flash Messages */
     .flash-message {
@@ -925,6 +964,22 @@ body {
 
 /* Active for screen sizes under 350px */
 @media (max-width: 350px) {
+    /* --- Home Page */
+    .section-header {
+        font-size: 25px;
+    }
+
+    .home-image {
+        height: 25vh;
+    }
+
+    .home-hero-image {
+        line-height: 25vh;
+    }
+
+    .home-hero-image img{
+        height: 4rem;
+    }
 
     /* --- Flash Messages */
     .flash-message {
@@ -1053,6 +1108,26 @@ body {
 
 /* Active for screen sizes under 292px */
 @media (max-width:292px) {
+    /* --- Home Page */
+    .home-image {
+        height: 25vh;
+    }
+
+    .home-hero-image {
+        line-height: 25vh;
+    }
+
+    .home-hero-image img{
+        height: 3rem;
+    }
+
+    .home-section p {
+        font-size: 15px;
+    }
+
+    .home-section {
+        margin: 20px auto 10px;
+    }
 
     /* --- Flash Messages */
     .flash-message {
