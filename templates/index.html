@@ -3,7 +3,7 @@
 {% block title %}Covid Companion | {{ title }}{% endblock %}
 
 {% block content %}
-        <!-- Landing Page Image -->
+    <!-- Landing Page Image -->
     <div class="container-fluid container-head">
         <div class="row hero-row">
             <div class="col-12 home-image">
@@ -16,41 +16,49 @@
         </div>
     </div>
     <!-- / .Landing Page Image -->
-<div class="background-image home-background">
-    <div class="container">
 
-        <!-- About Us Section -->
-            <div class="row">
-                <div class="col-12 col-md-8 home-section about-sect">
-                    <h2 class="section-header">About Us</h2>
-                    <p>Covid Companion was set up to provide help for both old people and people who are classed as vulnerable during the current Covid-19 (Coronavirus) pandemic. Our goal is to connect the old and vulnerable with people who are willing to volunteer their time to retrieve essential goods such as food and medication for those in need during these unprecedented times.</p>
-                </div>
-            </div>
-        <!-- / .About Us Section -->
+    
+    <div class="background-image home-background">
+        <div class="container">
 
-        <!-- Introduction Section -->
-            <div class="row">
-                <div class="col-12 col-lg-6 home-section" id="scroll-1">
-                    <h2 class="section-header">Volunteering</h2>
-                    <p>If you're available and able to volunteer any amount of time whether its helping 10 people or 1 person a week, all help is greatly appreciated. In times like these we do not know what is coming next, so coming together to ensure everyone is being taken care of is the most important thing. If you're interested in volunteering we urge you to create an account and get started with us!</p>                    
+            <!-- About Us Section -->
+                <div class="row">
+                    <div class="col-12 col-md-8 home-section about-sect">
+                        <h2 class="section-header">About Us</h2>
+                        <p>Covid Companion was set up to provide help for both old people and people who are classed as vulnerable during the current Covid-19 (Coronavirus) pandemic. Our goal is to connect the old and vulnerable with people who are willing to volunteer their time to retrieve essential goods such as food and medication for those in need during these unprecedented times.</p>
+                    </div>
                 </div>
+            <!-- / .About Us Section -->
 
-                <div class="col-12 col-lg-6 home-section">
-                    <h2 class="section-header">Needing Assisstance</h2>
-                    <p>We understand for many people asking for any type of help is not an easy task however during times like these we are all here to support eachother, especially to those in need. If you're in need of assisstnace, we urge you to register an account and create a post so that one of our volunteers can help. You can provide a list of items that you need in the shops or you provide us with your click and collect order number with peace of mind as all our volunteers have been verified.</p>                    
-                </div>
-            </div>
-        <!-- / .Introduction Section -->
+            <!-- Introduction Section -->
+                <div class="row">
+                    <!-- Volunteering -->
+                    <div class="col-12 col-lg-6 home-section" id="scroll-1">
+                        <h2 class="section-header">Volunteering</h2>
+                        <p>If you're available and able to volunteer any amount of time whether its helping 10 people or 1 person a week, all help is greatly appreciated. In times like these we do not know what is coming next, so coming together to ensure everyone is being taken care of is the most important thing. If you're interested in volunteering we urge you to create an account and get started with us!</p>                    
+                    </div>
+                    <!-- / .Volunteering -->
 
-        <!-- Get Started Section -->
-            <div class="row">
-                <div class="col-12 col-md-8 home-section getting-started-sect">
-                    <h2 class="section-header">How to get Started</h2>
-                    <p>Whether you're looking to become a volunteer or in need of someone to do your weekly shop as you are following the HSE's "cocooning" reccomendations, the process is the same and the process is simple. All you need to do to get involved is create an account and you're all set to go!</p>
-                    <a href="{{ url_for('sign_up') }}" class="error-btn">Get Started</a>
+                    <!-- Needing Assisstance -->
+                    <div class="col-12 col-lg-6 home-section">
+                        <h2 class="section-header">Needing Assisstance</h2>
+                        <p>We understand for many people asking for any type of help is not an easy task however during times like these we are all here to support eachother, especially to those in need. If you're in need of assisstnace, we urge you to register an account and create a post so that one of our volunteers can help. You can provide a list of items that you need in the shops or you provide us with your click and collect order number with peace of mind as all our volunteers have been verified.</p>                    
+                    </div>
+                    <!-- / .Needing Assisstance -->
+
                 </div>
-            </div>
-        <!-- / .Get Started Section -->
+            <!-- / .Introduction Section -->
+
+            <!-- Get Started Section -->
+                <div class="row">
+                    <div class="col-12 col-md-8 home-section getting-started-sect">
+                        <h2 class="section-header">How to get Started</h2>
+                        <p>Whether you're looking to become a volunteer or in need of someone to do your weekly shop as you are following the HSE's "cocooning" reccomendations, the process is the same and the process is simple. All you need to do to get involved is create an account and you're all set to go!</p>
+                        <a href="{{ url_for('sign_up') }}" class="error-btn">Get Started</a>
+                    </div>
+                </div>
+            <!-- / .Get Started Section -->
+            
+        </div>
     </div>
-</div>
 {% endblock %}

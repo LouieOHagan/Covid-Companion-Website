@@ -3,27 +3,29 @@
 {% block title %}{{ title }} | Covid Companion{% endblock %}
 
 {% block content %}
-<div class="background-image access-denied-background">
-    <div class="container error-pic">
+    <div class="background-image access-denied-background">
+        <div class="container error-pic">
 
-        <!-- Landing Page Image -->
-        <div class="row">
-            <div class="col-12 hero-text">
-                <img src="{{ url_for('static', filename='images/500.png') }}" alt="404 Image" />
+            <!-- Error Image -->
+            <div class="row">
+                <div class="col-12 hero-text">
+                    <img src="{{ url_for('static', filename='images/500.png') }}" alt="404 Image" />
+                </div>
             </div>
-        </div>
-        <!-- / .Landing Page Image -->
-        <div class="row">
-            <div class="col-12">
-                <h1>OOPS! That aint good :(</h1>
-                
-                <p>It looks like something broke and the lights went out!</p>
-                <p>We are still going to try and get you home though</p>
-                <a href="{{ url_for('home') }}" class="error-btn">Go Home</a>
-                <p class="email">If this error persists, please email us at <a href="mailto:support@covid-companion.ie">support@covid-companion.ie</a></p>
+            <!-- / .Error Image -->
+            <!-- Error Text -->
+            <div class="row">
+                <div class="col-12">
+                    <h1>OOPS! That aint good :(</h1>
+                    
+                    <p>It looks like something broke and the lights went out!</p>
+                    <p>We are still going to try and get you home though</p>
+                    <a href="{{ url_for('home') }}" class="error-btn">Go Home</a>
+                    <p class="email">If this error persists, please email us at <a href="mailto:support@covid-companion.ie">support@covid-companion.ie</a></p>
+                </div>
             </div>
+            <!-- / .Error Text -->
+
         </div>
     </div>
-</div>
-    
 {% endblock %}

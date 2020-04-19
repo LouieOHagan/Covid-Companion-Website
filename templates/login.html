@@ -3,53 +3,60 @@
 {% block title %}{{ title }} | Covid Companion{% endblock %}
 
 {% block content %}
-<div class="background-image login-background">
-    <div class="container">
-        <div class="row">
-            <div class="col-11 col-sm-12 col-md-10 col-lg-8 flash-message-bar">
-                {% with messages = get_flashed_messages() %}
-                    {% if messages %}
-                        {% for message in messages %}
-                            <div class="alert alert-dismissible fade show flash-message" role="alert">
-                                {{ message }}
-                                <button type="button" class="close close-btn" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                        {% endfor %}
-                    {% endif %}
-                {% endwith %}
+    <div class="background-image login-background">
+        <!-- Login Card Section -->
+        <div class="container">
+
+            <!-- Flashed Message -->
+            <div class="row">
+                <div class="col-11 col-sm-12 col-md-10 col-lg-8 flash-message-bar">
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-dismissible fade show flash-message" role="alert">
+                                    {{ message }}
+                                    <button type="button" class="close close-btn" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                </div>
             </div>
-        </div>
-        <div class="row">
+            <!-- / .Flashed Message -->
+
             <!-- Login Card Title -->
-            <div class="col-6 col-md-5 col-lg-4 title-card login-card">
-                <h2>Login</h2>
+            <div class="row">
+                <div class="col-6 col-md-5 col-lg-4 title-card login-card">
+                    <h2>Login</h2>
+                </div>
             </div>
             <!-- / .Login Card Title -->
-        </div>
-        <div class="row">
+
             <!-- Login Card Content -->
-            <div class="col-11 col-sm-12 col-md-10 col-lg-8 form-card">
-                <i class="far fa-user-circle user-icon"></i>
-                <form class="form-section" action="{{url_for('login')}}" method="POST">
-                    <!-- Email Input -->
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" class="input-field" name="email" id="email" required>
-                    </div>
-                    <!-- Password Input -->
-                    <div class="form-group">
-                        <label for="pword">Password:</label>
-                        <input type="password" class="input-field" name="pword" id="pword" required>
-                    </div>
-                    <!-- Submit Button -->
-                    <input type="submit" class="submit-btn" value="Login">
-                </form>
-            </div>
+            <div class="row">
+                <div class="col-11 col-sm-12 col-md-10 col-lg-8 form-card">
+                    <i class="far fa-user-circle user-icon"></i>
+                    <form class="form-section" action="{{url_for('login')}}" method="POST">
+                        <!-- Email Input -->
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="input-field" name="email" id="email" required>
+                        </div>
+                        <!-- Password Input -->
+                        <div class="form-group">
+                            <label for="pword">Password:</label>
+                            <input type="password" class="input-field" name="pword" id="pword" required>
+                        </div>
+                        <!-- Submit Button -->
+                        <input type="submit" class="submit-btn" value="Login">
+                    </form>
+                </div>
+            </div> 
             <!-- / .Login Card Content -->
-        </div> 
+            
+        </div>
+        <!-- / .Login Card Section -->
     </div>
-    <!-- / .Login Card Section -->
-</div>
 {% endblock %}

@@ -1,19 +1,19 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block title %}{{ user.first_name }} {{ user.last_name }} - {{ title }} | Covid Companion{% endblock %} {% block content %}
+    <div class="background-image edit-profile-background">
 
-{% block title %}{{ user.first_name }} {{ user.last_name }} - {{ title }} | Covid Companion{% endblock %}
+        <!-- Edit Profile Card Section -->
+        <div class="container">
 
-{% block content %}
-<div class="background-image edit-profile-background">
-    <div class="container">
+            <!-- Edit Profile Card Title -->
             <div class="row">
-                <!-- Sign Up Card Title -->
                 <div class="col-6 col-md-5 col-lg-4 title-card signup-card">
                     <h2>Edit Profile</h2>
                 </div>
-                <!-- / .Sign Up Card Title -->
             </div>
+            <!-- / .Edit Profile Card Title -->
+
+            <!-- Edit Profilep Card Content -->
             <div class="row">
-                <!-- Sign Up Card Content -->
                 <div class="col-11 col-sm-12 col-md-10 col-lg-8 form-card">
                     <i class="far fa-user-circle user-icon"></i>
                     <form class="form-section" action="{{url_for('edit_profile')}}" method="POST">
@@ -52,16 +52,18 @@
                                 {% else %}
                                     <option value="Volunteer">Volunteer</option>
                                 {% endif %}
-                                
+
                             </select>
                         </div>
                         <!-- Submit Button -->
                         <input type="submit" class="submit-btn" value="Update">
                     </form>
                 </div>
-                <!-- / .Sign Up Card Content -->
-            </div> 
+            </div>
+            <!-- / .Edit Profile Card Content -->
+
         </div>
-        <!-- / .Sign Up Card Section -->
-</div>
+        <!-- / .Edit Profile Card Section -->
+        
+    </div>
 {% endblock %}

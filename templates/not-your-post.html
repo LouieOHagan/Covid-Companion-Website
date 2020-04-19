@@ -3,27 +3,29 @@
 {% block title %}{{ title }} | Covid Companion{% endblock %}
 
 {% block content %}
-<div class="background-image access-denied-background">
-    <div class="container error-pic">
+    <div class="background-image access-denied-background">
+        <div class="container error-pic">
 
-        <!-- Landing Page Image -->
-        <div class="row">
-            <div class="col-12 hero-text">
-                <img src="{{ url_for('static', filename='images/403.png') }}" alt="403 Image" />
+            <!-- Error Image -->
+            <div class="row">
+                <div class="col-12 hero-text">
+                    <img src="{{ url_for('static', filename='images/403.png') }}" alt="403 Image" />
+                </div>
             </div>
-        </div>
-        <!-- / .Landing Page Image -->
-        <div class="row">
-            <div class="col-12">
-                <h1>Access Denied!</h1>
-                
-                <p>We hate to ruin the party however this isnt your post so stop trying to modify it.</p>
-                <p>Lucky for you, we are still nice people so here is a button to take you home</p>
-                <a href="{{ url_for('home') }}" class="error-btn">Go Home</a>
-                <p class="email">Think this is a mistake ? <a href="mailto:support@covid-companion.ie">support@covid-companion.ie</a></p> 
+            <!-- / .Error Image -->
+            <!-- Error Text -->
+            <div class="row">
+                <div class="col-12">
+                    <h1>Access Denied!</h1>
+                    
+                    <p>We hate to ruin the party however this isnt your post so stop trying to modify it.</p>
+                    <p>Lucky for you, we are still nice people so here is a button to take you home</p>
+                    <a href="{{ url_for('home') }}" class="error-btn">Go Home</a>
+                    <p class="email">Think this is a mistake ? <a href="mailto:support@covid-companion.ie">support@covid-companion.ie</a></p> 
+                </div>
             </div>
+            <!-- / .Error Text -->
+
         </div>
     </div>
-</div>
-    
 {% endblock %}
