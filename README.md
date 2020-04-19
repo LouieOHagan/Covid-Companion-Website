@@ -146,6 +146,7 @@ Project preview/showcase
 		- Right now posts can be as long or short as possible so not much can be done when it comes to the responsive side other than make sure everything is well spaced apart
 - Get rid of accordion and make another template page so users can just click in to a page and have the data presented neatly 
 - Features in the "If have time" section of the To Do list.
+- Remake home page with cleaner look and more content.
 
 ## Database Schema
 - The Database is made up of 3 collections in total, `counties`, `posts` & `users`
@@ -325,6 +326,7 @@ def check_logged_in(func):
 ```
 
 ### Content
+- Psychological properties of colours text in the README.md was found [here](http://www.colour-affects.co.uk/psychological-properties-of-colours)
 
 ### Media
 - [Pixabay](https://pixabay.com/): All stock background images of Dublin were obtained from Pixabay.

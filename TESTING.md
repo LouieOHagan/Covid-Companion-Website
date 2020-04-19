@@ -6,6 +6,16 @@
 
 ## Testing
 
+The W3C Markup Validator was used to validate all pages on the website using "Validate by URI" to avoid syntax errors being shown as a result of Jinja and extending the base.html file. 
+The W3C CSS Validator Services was used to validate the CSS within the style.css file.
+JSHint was used to validate the Javascript code used in the project by directly inputting the code to JSHint.
+PEP8 Online was used to ensure that the python code written in the app.py file met PEP8 requirements.
+- [W3C Markup Validator](https://validator.w3.org/#validate_by_uri) - [Results]()
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results]()
+- [JSHint](https://jshint.com/) - [Results]()
+    - Note: warning of "one unused variable" appearing however the function is being called inside of the get-help.html using an onclick atrribute hence the flag. 
+- [PEP8 Online](http://pep8online.com/)- [Results]()
+
 ### Testing User Stories from User Experience (UX) Section
 
 - #### First Time User Goals
