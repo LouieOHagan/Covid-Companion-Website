@@ -98,7 +98,7 @@ body {
 }
 
 .nav-btn .nav-link {
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .nav-btn .nav-link:hover {
@@ -616,7 +616,7 @@ body {
 .form-group label {
     margin-bottom: 0px;
     color: #feb62e;
-    font-weight: 100;
+    font-weight: 300;
     border-bottom: 1px solid #feb62e;
     padding-right: 5px;
     display: table;

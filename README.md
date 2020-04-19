@@ -55,31 +55,41 @@ Project preview/showcase
             it is a combination of the physical and the  emotional. It focuses our minds on issues of physical comfort - food, warmth, shelter etc. - and sensuality. It is a 'fun' colour."
 
     - #### Typography
-        - d
+        - The Titillium Web is the only font used throughout the whole website with Sans Serif as the backup font in case for any reason the font isn't being imported into the site correctly.
+        I have found that finding the correct font can usually be quite a time consuming process however in this case I was looking for a font that offered many different font weights but also
+        was very simplistic and easy to read without being too big and "in your face". As I have used the Titillium Web font in a previous project I was confident that this would be a good
+        choice. The font was imported in to the style.css from Google Fonts who make it very easy to to import fonts and are a very reliable external source. The Titillium Web font offers 11 font 
+        weight styles from "Extra Light" (200 weight) to "Black" (900 weight) however for this project only the 300, 400, 500 & 600 font weights were imported and utilised.
+
     - #### Imagery
-        - d
-    
+        - During the design process, imagery was a massive factor because instead of having a background colour I planned to have an image in the background of all of the pages because I
+        felt that it would too dark and boring have a solid dark grey background. I decided on a style of image that would be consistent throughout the whole website which ended up being
+            - The theme I planned to keep for all of the images was outdoor photos from around Dublin. I planned to edit all photos in photoshop to ensure all background images maintained the 
+            same style which was a black and white image with a 9px gaussian blur filter. After testing the black and white image without the blur filter, there wasnt enough contrast and 
+            the background image took too much of the attention of the primary purpose of the page.
+        - Aswell as the background images, I decided to create an image for the footer that was a simplistic but powerful "swoosh" which matched the colour scheme of the website. I felt it
+        would add a bit more personality and colour to the footer as the footer of a page is the end of the page and commonly isnt the most exciting part of a website.    
 
 * ### Wireframes
-    * Home Page Wireframe - [View]()   
+    * Home Page Wireframe - [View](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/wireframes/Home%20Page.png)   
 
-    * Give Help Page Wireframe - [View]()
+    * Give Help Page Wireframe - [View](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/wireframes/Give%20Help%20Page.png)
 
-    * Get Help Page Wireframe - [View]()
+    * Get Help Page Wireframe - [View](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/wireframes/Get%20Help%20Page.png)
 
-    * Login Page Wireframe - [View]()
+    * Login Page Wireframe - [View](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/wireframes/Sign%20In%20Page%20Page.png)
 
-    * Sign Up Help Page Wireframe - [View]()
+    * Sign Up Help Page Wireframe - [View](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/wireframes/Sign%20Up%20Page.png)
 
-    * User Dashboard Help Page Wireframe - [View]()
+    * User Dashboard Help Page Wireframe - [View](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/wireframes/User%20Dashboard%20Page.png)
 
-    * Edit Post Page Wireframe - [View]()
+    * Edit Post Page Wireframe - [View](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/wireframes/Edit%20Post%20Page.png)
 
-    * Edit Profile Page Wireframe - [View]()
+    * Edit Profile Page Wireframe - [View](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/wireframes/Edit%20Profile%20Page.png)
 
-    * Error Pages Wireframe - [View]()
+    * Error Pages Wireframe - [View](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/wireframes/Error%20Page.png)
 
-    * Click [Here]() for Document containing all Wireframes in .pdf format.
+    * Click [Here](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/wireframes/MS3%20Wireframes.pdf) for Document containing all Wireframes in .pdf format.
     
 ## Features
 
