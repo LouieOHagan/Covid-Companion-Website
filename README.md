@@ -9,7 +9,7 @@ in order to make the users experience as enjoyable and easy as possible while al
 
 Once registered, volunteer users will be given access to the "Give Help" page where they can see all the posts that have been created by people reaching out looking for help. They will be able to filter by county to find
 people in their county that are in need of help and then open their post to see what the person is in need of. All posts have a status field which can be updated by volunteers. By default, posts will be assigned the "Available" status
-once created, inside of the posts users can change the status to "In Progress" when they take on the role of retrieving the post creators things & "Complete" once they have delivered the items to the person in need.
+once created, inside of the posts users can change the status to "In Progress" when they take on the role of retrieving the post creator's things & "Complete" once they have delivered the items to the person in need.
 
 Once registered, vulnerable users can navigable to the "Get Help" page where users can create posts. When creating a post, half of the form is automatically filled in for you, the information is 
 retrieved from the users profile however these values can be changed like any other input field in case that the user is filling out a form on behalf of a family member or friend who does not have 
@@ -33,7 +33,7 @@ Project preview/showcase
     - #### Volunteer 
         1. As a Volunteer, I want to be able to view posts that vulnerable people have created so that I can do my part by helping the people in need in my community.
         2. As a Volunteer, I want to be able to get in contact with the creator of the post to double check they don't need anything else while I'm out.
-        3. As a Volunteer, I want to be able to communicate to the post creator and other volunteers that I am going to do the shop to ensure more than 1 person isn't getting things for the one person at the same time.
+        3. As a Volunteer, I want to be able to communicate to the post creator and other volunteers that I am going to do the shop so that more than 1 person isn't getting things for the one person at the same time.
     - #### Returning user
         1. As a Returning user, I want to be able to edit the information on my profile in case I inputted something wrong during registration.
         2. As a Returning user, I want to be able to logout of my account for privacy and safety reasons.
@@ -45,9 +45,9 @@ Project preview/showcase
         "pop"/stick out and make them more visually powerful.
         - Originally I planned to go with black (#000) and a very bright yellow that is usually seen on Covid-19 warning signs such as [here](https://www.rehab.ie/images_upload/news-and-stories/blogs/COVID.jpg)
         however after considering the thoughts the user could generate after seeing such bright colours I reconsidered the colour scheme as the website is meant to be warm and welcoming. Many people 
-        would consider bright yellow as a colour of warning and can is usually used to grab the attention of a person, as a result I changed the colour scheme to a mustard yellow / bright orange
+        would consider bright yellow as a colour of warning and is usually used to grab the attention of a person, as a result I changed the colour scheme to a mustard yellow / bright orange
         (#feb62e) and also changed the black to a dark grey (#3c3c3c) to ensure the website felt warm and welcoming to the user so they are instantly attracted to the site and
-        there mind is relaxed and feels secure to ensure the best user experience. The Psychological effects that colours can have was a big part of deciding what colours to go with.
+        their mind is relaxed and feels secure to ensure the best user experience. The Psychological effects that colours can have was a big part of deciding what colours to go with.
             - [#3c3c3c](https://www.color-hex.com/color/3c3c3c) (Dark gray): "Black communicates absolute clarity, with no fine nuances. It communicates sophistication and uncompromising 
             excellence and it works particularly well with white. Black creates a perception of weight and seriousness."
             - [#feb62e](https://www.color-hex.com/color/feb62e) (Mustard Yellow/Light Orange): "Since it is a combination of red and yellow, orange is stimulating and the reaction to 
@@ -62,11 +62,11 @@ Project preview/showcase
 
     - #### Imagery
         - During the design process, imagery was a massive factor because instead of having a background colour I planned to have an image in the background of all of the pages because I
-        felt that it would too dark and boring have a solid dark grey background. I decided on a style of image that would be consistent throughout the whole website which ended up being
+        felt that it would too dark and boring to have a solid dark grey background. I decided on a style of image that would be consistent throughout the whole website which ended up being
             - The theme I planned to keep for all of the images was outdoor photos from around Dublin. I planned to edit all photos in photoshop to ensure all background images maintained the 
             same style which was a black and white image with a 9px gaussian blur filter. After testing the black and white image without the blur filter, there wasnt enough contrast and 
             the background image took too much of the attention of the primary purpose of the page.
-        - Aswell as the background images, I decided to create an image for the footer that was a simplistic but powerful "swoosh" which matched the colour scheme of the website. I felt it
+        - As well as the background images, I decided to create an image for the footer that was a simplistic but powerful "swoosh" which matched the colour scheme of the website. I felt it
         would add a bit more personality and colour to the footer as the footer of a page is the end of the page and commonly isnt the most exciting part of a website.    
 
 * ### Wireframes
@@ -107,7 +107,7 @@ Project preview/showcase
     - ~~Setup Flash error responses~~
 - ~~Add autofill values on forms from session information~~ - **Implemented 15/04/20**
 - ~~Get content and styling for 404 pages, 500 pages, access denied pages and not your post pages~~ - **Implemented 18/04/20**
-- Hero image for home page
+- ~~Hero image for home page~~ - **Implemented 19/04/20**
 - Content for home page
 - ~~Add content and styling for dashboard~~ - **Implemented 17/04/20**
 - ~~Create edit profile page~~ - **Implemented 16/04/20**
@@ -130,7 +130,7 @@ Project preview/showcase
 - Create update password page where they need to put in old password, new password and confirm new password.
 - Setup so that all information doesnt dissapear if login or signup is unnsuccessful, only passwords dissappear.
 
-###### Last Updated: 06:34am GMT - 19/04/20 
+###### Last Updated: 09:51am GMT - 19/04/20 
 
 ### Features Left to Implement
 ##### These are features that have not been added at the time of development due to various reasons such as time limitations.

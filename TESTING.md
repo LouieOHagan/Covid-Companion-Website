@@ -10,11 +10,22 @@ The W3C Markup Validator was used to validate all pages on the website using "Va
 The W3C CSS Validator Services was used to validate the CSS within the style.css file.
 JSHint was used to validate the Javascript code used in the project by directly inputting the code to JSHint.
 PEP8 Online was used to ensure that the python code written in the app.py file met PEP8 requirements.
-- [W3C Markup Validator](https://validator.w3.org/#validate_by_uri) - [Results]()
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results]()
-- [JSHint](https://jshint.com/) - [Results]()
+- [W3C Markup Validator](https://validator.w3.org/#validate_by_uri) - [Results](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/w3c-html-validator.png)
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/w3c-css-check.PNG)
+- [JSHint](https://jshint.com/) - [Results](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/jshint-javascript-check.PNG)
     - Note: warning of "one unused variable" appearing however the function is being called inside of the get-help.html using an onclick atrribute hence the flag. 
-- [PEP8 Online](http://pep8online.com/)- [Results]()
+- [PEP8 Online](http://pep8online.com/)- [Results](https://github.com/LouieOHagan/Covid-Companion-Website/blob/master/readMe-assets/pep8-python-check.PNG)
+
+### Testing Accounts
+#### Vulnerable User Account
+    - Login Details:
+        - Email Address: johndoe@gmail.com
+        - Password: password
+
+#### Volunteer User Account
+    - Login Details:
+        - Email Address: l.hurley@tester.com
+        - Password: password1
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -165,3 +176,8 @@ information is autofilled on the form ready to be edited again.
     document through a variable to the page.
 
 ### Known Bugs
+
+- If user makes error on signup form or login form, they will get an error message explaining what went wrong however the whole form is cleared and they need to retype everything again.
+    - Not fixed due to time limitations
+- Users who have the volunteer role still have access to the create post page and are able to create posts.
+    - Ideally I would like to restrict volunteers from creating posts however due to time limitations, this issue was not fixed.
