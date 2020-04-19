@@ -40,6 +40,25 @@ Project preview/showcase
         2. As a Returning user, I want to be able to logout of my account for privacy and safety reasons.
 
 - ### Design
+    - #### Colour Scheme
+        - The 2 main colours I chose for the project was #3c3c3c (a dark gray) & #feb62e (A mustard yellow/light orange) while also incorporating #f5f5f5 (an off-white) too as I felt
+        that the constant use of a dark colour (#3c3c3c) on a vibrant mustard yellow (#feb62e) would be too much and instead the mustard yellow would be used to make certain features 
+        "pop"/stick out and make them more visually powerful.
+        - Originally I planned to go with black (#000) and a very bright yellow that is usually seen on Covid-19 warning signs such as [here](https://www.rehab.ie/images_upload/news-and-stories/blogs/COVID.jpg)
+        however after considering the thoughts the user could generate after seeing such bright colours I reconsidered the colour scheme as the website is meant to be warm and welcoming. Many people 
+        would consider bright yellow as a colour of warning and can is usually used to grab the attention of a person, as a result I changed the colour scheme to a mustard yellow / bright orange
+        (#feb62e) and also changed the black to a dark grey (#3c3c3c) to ensure the website felt warm and welcoming to the user so they are instantly attracted to the site and
+        there mind is relaxed and feels secure to ensure the best user experience. The Psychological effects that colours can have was a big part of deciding what colours to go with.
+            - [#3c3c3c](https://www.color-hex.com/color/3c3c3c) (Dark gray): "Black communicates absolute clarity, with no fine nuances. It communicates sophistication and uncompromising 
+            excellence and it works particularly well with white. Black creates a perception of weight and seriousness."
+            - [#feb62e](https://www.color-hex.com/color/feb62e) (Mustard Yellow/Light Orange): "Since it is a combination of red and yellow, orange is stimulating and the reaction to 
+            it is a combination of the physical and the  emotional. It focuses our minds on issues of physical comfort - food, warmth, shelter etc. - and sensuality. It is a 'fun' colour."
+
+    - #### Typography
+        - d
+    - #### Imagery
+        - d
+    
 
 * ### Wireframes
     * Home Page Wireframe - [View]()   
