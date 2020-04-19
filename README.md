@@ -94,6 +94,23 @@ number that they were given from the shop when they completed their click and co
 
 ### Current Pages & Features
 
+- Navigation bar
+    - For larger screened devices the website has a "traditional" navigation bar that any user would expect to see when they load on to a website
+    however once the screen width size reaches below 768px pixel I decided to take a different design route. "Traditionalally" I would go for a burger 
+    icon however during my design process I came across "Thumb zone designing".  
+    - "Hoober’s research shows that 49% of people hold their smartphones with one hand, relying on thumbs to do the heavy lifting. Clark took this even 
+    further and determined that 75% of interactions are thumb-driven. With this understanding of hand placement, we can conclude that certain zones for 
+    thumb movement apply to most smartphones. We’ll define them as easy-to-reach, hard-to-reach and in-between areas."
+        - A diagram showing these places to reach can be found [here](https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/496f7bc0-4c6c-4159-b731-ec3adcf91105/thumb-zone-mapping-opt.png)
+        - Further information on Thumb Zone design found [here](https://www.smashingmagazine.com/2016/09/the-thumb-zone-designing-for-mobile-users/)
+    - The navigation bar down the bottom of your screen is simply a lot more convinient for the user and offers a better user experience. When looking on a computer it can
+    be a little bit surprising as you expect to see a burger icon however after testing it on multiple smartphones I realised that you would hardly notice the different 
+    as in our everyday lives we use Instagram, Facebook, Twitter, Youtube etc countless amounts of times, all of which use the same styled navigation bar in their mobile apps.
+    
+- Accordion 
+
+- CRUD Functionality
+
 ### To Do List
 #### MUST DO
 - ~~Get button on accordion and test on iphone~~ - **Implemented 18/04/20**
@@ -111,7 +128,7 @@ number that they were given from the shop when they completed their click and co
 - ~~Content for home page~~ - **Implemented 19/04/20**
 - ~~Add content and styling for dashboard~~ - **Implemented 17/04/20**
 - ~~Create edit profile page~~ - **Implemented 16/04/20**
-- ~~Complete README.md
+- ~~Complete README.md~~ - **Implemented 16/04/20**
 - ~~Fix site wide console error of id not being detected caused by eventlistenerID in main.js.~~ - **Implemented 15/04/20**
 - ~~Fix border radius bug that appears on iphones with all input field border radius visible.~~ - **Implemented 15/04/20**
 - Add more commenting on all code
@@ -130,7 +147,7 @@ number that they were given from the shop when they completed their click and co
 - Create update password page where they need to put in old password, new password and confirm new password.
 - Setup so that all information doesnt dissapear if login or signup is unnsuccessful, only passwords dissappear.
 
-###### Last Updated: 10:29am GMT - 19/04/20 
+###### Last Updated: 11:52am GMT - 19/04/20 
 
 ### Features Left to Implement
 ##### These are features that have not been added at the time of development due to various reasons such as time limitations.
@@ -147,6 +164,7 @@ number that they were given from the shop when they completed their click and co
 - Get rid of accordion and make another template page so users can just click in to a page and have the data presented neatly 
 - Features in the "If have time" section of the To Do list.
 - Remake home page with cleaner look and more content.
+- Add more content to the Features section of README.md file.
 
 ## Database Schema
 - The Database is made up of 3 collections in total, `counties`, `posts` & `users`
@@ -327,6 +345,7 @@ def check_logged_in(func):
 
 ### Content
 - Psychological properties of colours text in the README.md was found [here](http://www.colour-affects.co.uk/psychological-properties-of-colours)
+- Smashing Magazine for information on Thumb zone design was found [here](https://www.smashingmagazine.com/2016/09/the-thumb-zone-designing-for-mobile-users/)
 
 ### Media
 - [Pixabay](https://pixabay.com/): All stock background images of Dublin were obtained from Pixabay.
