@@ -16,7 +16,7 @@ retrieved from the users profile however these values can be changed like any ot
 access to a computer. Users also have the option to provide the volunteer with a list of items that they require or can click the "Is this a Click and Collect Order ?" checkbox and provide the order 
 number that they were given from the shop when they completed their click and collect order on their website.
 
-Project preview/showcase
+<h2 align="center"><img src="https://i.ibb.co/LQLmwY7/Final-Showcase.jpg"></h2>
 
 ## User Experience (UX)
 
@@ -108,10 +108,10 @@ Project preview/showcase
 - ~~Add autofill values on forms from session information~~ - **Implemented 15/04/20**
 - ~~Get content and styling for 404 pages, 500 pages, access denied pages and not your post pages~~ - **Implemented 18/04/20**
 - ~~Hero image for home page~~ - **Implemented 19/04/20**
-- Content for home page
+- ~~Content for home page~~ - **Implemented 19/04/20**
 - ~~Add content and styling for dashboard~~ - **Implemented 17/04/20**
 - ~~Create edit profile page~~ - **Implemented 16/04/20**
-- Complete README.md
+- ~~Complete README.md
 - ~~Fix site wide console error of id not being detected caused by eventlistenerID in main.js.~~ - **Implemented 15/04/20**
 - ~~Fix border radius bug that appears on iphones with all input field border radius visible.~~ - **Implemented 15/04/20**
 - Add more commenting on all code
@@ -130,7 +130,7 @@ Project preview/showcase
 - Create update password page where they need to put in old password, new password and confirm new password.
 - Setup so that all information doesnt dissapear if login or signup is unnsuccessful, only passwords dissappear.
 
-###### Last Updated: 09:51am GMT - 19/04/20 
+###### Last Updated: 10:29am GMT - 19/04/20 
 
 ### Features Left to Implement
 ##### These are features that have not been added at the time of development due to various reasons such as time limitations.
